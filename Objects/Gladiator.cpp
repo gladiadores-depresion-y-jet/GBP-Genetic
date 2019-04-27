@@ -6,31 +6,37 @@
 #include <cstdlib>
 #include <time.h>
 #include <zconf.h>
+#include <random>
 #include "Gladiator.h"
+#include <math.h>
 
-static int defaultGeneLen = 64;
+static int defaultGeneLen = 6;
 static int individualID = 0;
+
+static std::random_device rd;     // only used once to initialise (seed) engine
+static std::mt19937 rng(rd());    // random-number engine used (Mersenne-Twister in this case)
+static std::uniform_int_distribution<int> uni(0,1); // guaranteed unbiased
 
 
 
 
 Gladiator::Gladiator() {
-    genes = new Byte[defaultGeneLen];
-    this->age = 0;
-    this->emotionalI = 0;
-    this->estimatedG = 0;
+    genes = vector<int>();
     this->id = individualID; individualID++;
-    this->physical = 0;
-    this->upper = 0;
-    this->lower = 0;
+    this->resistance = vector<int>();
+    this->emotionalI = vector<int>();
+    this->physical = vector<int>();
+    this->upper = vector<int>();
+    this->lower = vector<int>();
+    this->age = 0;
+    this->estimatedG = 0;
     this->probability = 0;
-    this->resistance = 0;
     this->init();
 }
 
 
-Gladiator::Gladiator(int ag, int emot, int phy, int up, int low, int res) {
-    this->genes = new Byte[defaultGeneLen];
+Gladiator::Gladiator(int ag, vector<int> emot, vector<int> phy, vector<int> up, vector<int> low, vector<int> res) {
+    this->genes = vector<int>();
     this->id = individualID; individualID++;
     this->resistance = res;
     this->age = ag;
@@ -48,29 +54,56 @@ void Gladiator::init() {
 }
 
 void Gladiator::generateIndividual() {
-    for(int i = 0 ; i< size() ; i++){
-        srand (time(0));
-        int random = rand()%2;
-        /*Byte gene = Byte();*/
-        Byte gene = (Byte)random;
-        genes[i] = gene;
+
+    for(int i = 0 ; i< defaultGeneLen ; i++){
+
+        auto random_integer = uni(rng);
+        genes.push_back(random_integer);
+        resistance.push_back(random_integer);
+    }
+    for(int i = 0 ; i< defaultGeneLen ; i++){
+
+        auto random_integer = uni(rng);
+        upper.push_back(random_integer);
+    }
+    for(int i = 0 ; i< defaultGeneLen ; i++){
+
+        auto random_integer = uni(rng);
+        lower.push_back(random_integer);
+    }
+    for(int i = 0 ; i< defaultGeneLen ; i++){
+
+        auto random_integer = uni(rng);
+        physical.push_back(random_integer);
+    }
+    for(int i = 0 ; i< defaultGeneLen ; i++){
+
+        auto random_integer = uni(rng);
+        emotionalI.push_back(random_integer);
     }
 }
 
-Byte Gladiator::getGene(int index){
-    return genes[index];
+int Gladiator::getGene(int index){
+    return genes.at(index);
 }
+int Gladiator::binTodec(vector<int> v) {
+    int result = 0;
+    int exponent = v.size()-1;
+    for(int i = 0 ; i<v.size() ; i++){
+        if(v.at(i)){
+            result += pow(2,exponent);
+        }
+        exponent--;
+    }return result;
 
-void Gladiator::setGenes(int index , Byte gene) {
-    this->genes[index] = gene;
-}
-void Gladiator::setDefaultGenLen(int def) {
-    defaultGeneLen = def;
 }
 
 int Gladiator::size() {
-    int len = sizeof(genes)/sizeof(genes[0]);
-    return len;
+    return defaultGeneLen;
+}
+
+void Gladiator::setGenes(int index , int gene) {
+    this->genes.at(index) = gene;
 }
 
 /*int Gladiator::getFitness() {
@@ -79,8 +112,8 @@ int Gladiator::size() {
 
 string Gladiator::genesToString() {
     string geneString = "";
-    for(int i = 0 ; i<size() ; i++){
-        geneString += getGene(i);
+    for(int i = 0 ; i< defaultGeneLen ; i++){
+        geneString += to_string(getGene(i));
     }
     return geneString;
 }
@@ -93,10 +126,6 @@ string Gladiator::genesToString() {
 //  Gets and Sets
 int Gladiator::getId(){
     return id;
-}
-
-void Gladiator::setId(int id) {
-    Gladiator::id = id;
 }
 
 int Gladiator::getAge(){
@@ -124,41 +153,41 @@ void Gladiator::setEstimatedG(int estimatedG) {
 }
 
 int Gladiator::getEmotionalI(){
-    return emotionalI;
+    return this->binTodec(emotionalI);
 }
 
-void Gladiator::setEmotionalI(int emotionalI) {
+void Gladiator::setEmotionalI(vector<int> emotionalI) {
     this->emotionalI = emotionalI;
 }
 
 int Gladiator::getPhysical(){
-    return physical;
+    return this->binTodec(physical);
 }
 
-void Gladiator::setPhysical(int physical) {
+void Gladiator::setPhysical(vector<int> physical) {
     this->physical = physical;
 }
 
 int Gladiator::getUpper(){
-    return upper;
+    return this->binTodec(upper);
 }
 
-void Gladiator::setUpper(int upper) {
+void Gladiator::setUpper(vector<int> upper) {
     this->upper = upper;
 }
 
 int Gladiator::getLower(){
-    return lower;
+    return this->binTodec(lower);
 }
 
-void Gladiator::setLower(int lower) {
+void Gladiator::setLower(vector<int> lower) {
     this->lower = lower;
 }
 
 int Gladiator::getResistance(){
-    return resistance;
+    return this->binTodec(resistance);
 }
 
-void Gladiator::setResistance(int resistance) {
+void Gladiator::setResistance(vector<int> resistance) {
     this->resistance = resistance;
 }

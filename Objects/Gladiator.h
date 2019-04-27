@@ -9,32 +9,55 @@
 #include <string>
 #include <string.h>
 #include <zconf.h>
+#include <vector>
 
 
+/**
+ * @file Gladiator.h
+ * @date 26/04/19
+ * @author Daniel garcia
+ * @title Clase individuo
+ * @brief Clase que abstrae la informacion de un individuo
+ */
 using namespace std;
 
 class Gladiator {
 private:
-    int id,  age, probability, estimatedG,
-            emotionalI, physical , upper , lower, resistance;
+    int id, age ,probability ,estimatedG;
+    vector<int> emotionalI, physical , upper , lower, resistance;
 
-    Byte * genes ;
+    vector<int> genes ;
 
 
 public:
+    /**
+     * @brief Constructores de la clase gladiator
+     */
     Gladiator();
-    Gladiator(int ag , int emot , int phy , int up , int low, int res);
+    Gladiator(int ag , vector<int> emot , vector<int> phy , vector<int> up , vector<int> low, vector<int> res);
+    /**
+     * @brief Inicializa los atributos del gladiador
+     */
     void init();
+    /**
+     * @brief Inicializa al gladiador de manera aleatoria
+     */
     void generateIndividual();
-    Byte getGene(int index);
-    void setGenes(int index , Byte gene);
-    static void setDefaultGenLen(int def);
+    /**
+     * Obtiene un gen especifico de la cadena
+     * @param index
+     * @return
+     */
+    int getGene(int index);
+    int binTodec(vector<int> v);
     int size();
+    /**
+     * Setea valor a un gen especifico de la cadena
+     */
+    void setGenes(int index , int gene);
     /*int getFitness();*/
     string genesToString();
-
     int getId();
-    void setId(int id);
     int getAge();
     void setAge(int age);
     int getProbability();
@@ -42,15 +65,15 @@ public:
     int getEstimatedG();
     void setEstimatedG(int estimatedG);
     int getEmotionalI();
-    void setEmotionalI(int emotionalI);
+    void setEmotionalI(vector<int> emotionalI);
     int getPhysical();
-    void setPhysical(int physical);
+    void setPhysical(vector<int> physical);
     int getUpper();
-    void setUpper(int upper);
+    void setUpper(vector<int> upper);
     int getLower();
-    void setLower(int lower);
+    void setLower(vector<int> lower);
     int getResistance();
-    void setResistance(int resistance);
+    void setResistance(vector<int> resistance);
 
 
 };

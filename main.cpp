@@ -1,7 +1,9 @@
 #include <iostream>
 #include <time.h>
 #include <unistd.h>
-#include "headers/Gladiator.h"
+#include <vector>
+#include "Objects/Gladiator.h"
+
 int main() {
     Gladiator * g = new Gladiator();
     Gladiator * g1 = new Gladiator();
@@ -15,6 +17,9 @@ int main() {
     cout<<"genes of gladiator: "<<g->getId()<<" is "<<g->genesToString()<<endl;
     cout<<"genes of gladiator: "<<g1->getId()<<" is "<<g1->genesToString()<<endl;
     cout<<"genes of gladiator: "<<g2->getId()<<" is "<<g2->genesToString()<<endl;
+    cout<<"resistance of gladiator: "<<g->getId()<< " is "<< g->getResistance()<< endl;
+    cout<<"resistance of gladiator: "<<g1->getId()<< " is "<< g1->getResistance()<< endl;
+    cout<<"resistance of gladiator: "<<g2->getId()<< " is "<< g2->getResistance()<< endl;
 
     return 0;
 }

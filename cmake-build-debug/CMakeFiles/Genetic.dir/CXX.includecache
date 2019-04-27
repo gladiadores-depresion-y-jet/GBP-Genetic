@@ -6,12 +6,14 @@
 
 #IncludeRegexTransform: 
 
-/home/sebas211288/Desktop/Genetic/headers/Gladiator.h
+/home/sebas211288/Desktop/Genetic/Objects/Gladiator.h
 string
 -
 string.h
 -
 zconf.h
+-
+vector
 -
 
 /home/sebas211288/Desktop/Genetic/main.cpp
@@ -21,6 +23,8 @@ time.h
 -
 unistd.h
 -
-headers/Gladiator.h
-/home/sebas211288/Desktop/Genetic/headers/Gladiator.h
+vector
+-
+Objects/Gladiator.h
+/home/sebas211288/Desktop/Genetic/Objects/Gladiator.h
 

@@ -24,21 +24,20 @@ private:
     int limit;
     Node<T>* head;
     bool * flag;
-    string * indicator;
 
 public:
     /**
      * Constructor de la clase
      */
     LinkedList(){
-        limit=2; size = 0; this->head = 0 ; flag = new bool(false); indicator = new string();
+        limit=2; size = 0; this->head = 0 ; flag = new bool(false);
     }
     /**
      * Constructor con limite de elementos
      * @param l
      */
     LinkedList(int l){
-        limit = l ; size = 0 ; head = 0; flag = new bool(false); indicator = new string();
+        limit = l ; size = 0 ; head = 0; flag = new bool(false);
 
     }
     /**
@@ -62,20 +61,7 @@ public:
     void setFlag(bool f){
         *flag = f;
     }
-    /**
-     * Asigna un indicador
-     * @param s
-     */
-    void setIndicator(string s){
-        *indicator = s;
-    }
-    /**
-     * Retorna el indicador
-     * @return
-     */
-    string getIndicator(){
-        return *indicator;
-    }
+
     /**
      * Asigna un limite entre 2 y 4 de elementos a la lista enlazada
      * Esto se hace solo para la lista de jugadores
@@ -133,7 +119,7 @@ public:
         }
         else
         {
-            cout<<"ERROR:Limite de jugadores alcanzado."<<endl;
+            cout<<"ERROR:Limite alcanzado."<<endl;
         }
     }
     /**
