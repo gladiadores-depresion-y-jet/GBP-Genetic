@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sebas211288/Desktop/Genetic/headers/Gladiator.h
+string
+-
+string.h
+-
+zconf.h
+-
+
+/home/sebas211288/Desktop/Genetic/main.cpp
+iostream
+-
+time.h
+-
+unistd.h
+-
+headers/Gladiator.h
+/home/sebas211288/Desktop/Genetic/headers/Gladiator.h
+
