@@ -6,16 +6,23 @@
 #define GENETIC_ALGORITHM_H
 
 
+#include "Population.h"
+
 class Algorithm {
     //parametos de GA
 
-private:
-    static double uniformRate;
-    static double mutationRate;
-    static int tournamentSize;
-    static bool elitism;
+public:
 
-    
+private:
+    static Population envolvePopulation(Population pop);
+    static Gladiator tournamentSelection(Population pop);
+    static Gladiator crossover(Gladiator glad1 , Gladiator glad2);
+
+
+
+
+
+
 
 };
 

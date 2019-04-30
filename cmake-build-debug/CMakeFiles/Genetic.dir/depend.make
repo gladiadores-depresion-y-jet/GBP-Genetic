@@ -3,11 +3,14 @@
 
 CMakeFiles/Genetic.dir/Objects/Algorithm.cpp.o: ../Objects/Algorithm.cpp
 CMakeFiles/Genetic.dir/Objects/Algorithm.cpp.o: ../Objects/Algorithm.h
+CMakeFiles/Genetic.dir/Objects/Algorithm.cpp.o: ../Objects/Gladiator.h
+CMakeFiles/Genetic.dir/Objects/Algorithm.cpp.o: ../Objects/Population.h
 
 CMakeFiles/Genetic.dir/Objects/Fitness.cpp.o: ../Objects/Fitness.cpp
 CMakeFiles/Genetic.dir/Objects/Fitness.cpp.o: ../Objects/Fitness.h
 CMakeFiles/Genetic.dir/Objects/Fitness.cpp.o: ../Objects/Gladiator.h
 
+CMakeFiles/Genetic.dir/Objects/Gladiator.cpp.o: ../Objects/Fitness.h
 CMakeFiles/Genetic.dir/Objects/Gladiator.cpp.o: ../Objects/Gladiator.cpp
 CMakeFiles/Genetic.dir/Objects/Gladiator.cpp.o: ../Objects/Gladiator.h
 

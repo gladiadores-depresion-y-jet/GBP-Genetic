@@ -8,6 +8,7 @@
 #include <zconf.h>
 #include <random>
 #include "Gladiator.h"
+#include "Fitness.h"
 #include <math.h>
 
 static int defaultGeneLen = 6;
@@ -110,7 +111,9 @@ void Gladiator::setGenes(int index , int gene) {
 
 int Gladiator::getFitness() {
     if(this->binTodec(resistance) == 0){
-        //CALCULAR FITNESS
+        if(fitness == 0){
+            fitness = Fitness::getFitness(*this);
+        }
     }
     return this->fitness;
 }

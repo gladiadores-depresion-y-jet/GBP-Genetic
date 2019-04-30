@@ -4,11 +4,14 @@
 CMakeFiles/Genetic.dir/Objects/Algorithm.cpp.o
  /home/sebas211288/Desktop/Genetic/Objects/Algorithm.cpp
  /home/sebas211288/Desktop/Genetic/Objects/Algorithm.h
+ /home/sebas211288/Desktop/Genetic/Objects/Gladiator.h
+ /home/sebas211288/Desktop/Genetic/Objects/Population.h
 CMakeFiles/Genetic.dir/Objects/Fitness.cpp.o
  /home/sebas211288/Desktop/Genetic/Objects/Fitness.cpp
  /home/sebas211288/Desktop/Genetic/Objects/Fitness.h
  /home/sebas211288/Desktop/Genetic/Objects/Gladiator.h
 CMakeFiles/Genetic.dir/Objects/Gladiator.cpp.o
+ /home/sebas211288/Desktop/Genetic/Objects/Fitness.h
  /home/sebas211288/Desktop/Genetic/Objects/Gladiator.cpp
  /home/sebas211288/Desktop/Genetic/Objects/Gladiator.h
 CMakeFiles/Genetic.dir/Objects/Population.cpp.o

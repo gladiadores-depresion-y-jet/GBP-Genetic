@@ -7,36 +7,14 @@
 #IncludeRegexTransform: 
 
 /home/sebas211288/Desktop/Genetic/Objects/Algorithm.cpp
+random
+-
 Algorithm.h
 /home/sebas211288/Desktop/Genetic/Objects/Algorithm.h
 
 /home/sebas211288/Desktop/Genetic/Objects/Algorithm.h
-
-/home/sebas211288/Desktop/Genetic/Objects/Fitness.cpp
-Fitness.h
-/home/sebas211288/Desktop/Genetic/Objects/Fitness.h
-
-/home/sebas211288/Desktop/Genetic/Objects/Fitness.h
-iostream
--
-vector
--
-Gladiator.h
-/home/sebas211288/Desktop/Genetic/Objects/Gladiator.h
-
-/home/sebas211288/Desktop/Genetic/Objects/Gladiator.cpp
-cstdlib
--
-time.h
--
-zconf.h
--
-random
--
-Gladiator.h
-/home/sebas211288/Desktop/Genetic/Objects/Gladiator.h
-math.h
--
+Population.h
+/home/sebas211288/Desktop/Genetic/Objects/Population.h
 
 /home/sebas211288/Desktop/Genetic/Objects/Gladiator.h
 string
@@ -48,27 +26,7 @@ zconf.h
 vector
 -
 
-/home/sebas211288/Desktop/Genetic/Objects/Population.cpp
-Population.h
-/home/sebas211288/Desktop/Genetic/Objects/Population.h
-
 /home/sebas211288/Desktop/Genetic/Objects/Population.h
 Gladiator.h
 /home/sebas211288/Desktop/Genetic/Objects/Gladiator.h
-
-/home/sebas211288/Desktop/Genetic/main.cpp
-iostream
--
-time.h
--
-unistd.h
--
-vector
--
-Objects/Gladiator.h
-/home/sebas211288/Desktop/Genetic/Objects/Gladiator.h
-Objects/Fitness.h
-/home/sebas211288/Desktop/Genetic/Objects/Fitness.h
-vector
-/home/sebas211288/Desktop/Genetic/vector
 
