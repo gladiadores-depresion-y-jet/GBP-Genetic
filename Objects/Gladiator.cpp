@@ -24,11 +24,11 @@ static std::uniform_int_distribution<int> uni(0,1); // guaranteed unbiased
 Gladiator::Gladiator() {
     genes = vector<int>();
     this->id = individualID; individualID++;
-    this->resistance = vector<int>();
-    this->emotionalI = vector<int>();
-    this->physical = vector<int>();
-    this->upper = vector<int>();
-    this->lower = vector<int>();
+    this->resistance = 0;
+    this->emotionalI = 0;
+    this->physical = 0;
+    this->upper = 0;
+    this->lower = 0;
     this->age = 0;
     this->estimatedG = 0;
     this->probability = 0;
@@ -36,7 +36,7 @@ Gladiator::Gladiator() {
 }
 
 
-Gladiator::Gladiator(int ag, vector<int> emot, vector<int> phy, vector<int> up, vector<int> low, vector<int> res) {
+Gladiator::Gladiator(int ag, int emot, int phy, int up, int low, int res) {
     this->genes = vector<int>();
     this->id = individualID; individualID++;
     this->resistance = res;
@@ -57,32 +57,24 @@ void Gladiator::init() {
 void Gladiator::generateIndividual() {
 
     //La resistencia se debe calcular con atributos age,emot,phy,up,low
-    for(int i = 0 ; i< defaultGeneLen ; i++){
 
-        auto random_integer = uni(rng);
-        genes.push_back(random_integer);
-        resistance.push_back(random_integer);
+    upper = uni(rng);
+    lower = uni(rng);
+    physical = uni(rng);
+    emotionalI = uni(rng);
+    age = uni(rng);
+    //aqui se tiene que calcula la resistencia y setearla , averiguar como calcular fuerza
+    if(this->calculateResistance()){
+        cout<<"resistencia de gladiador : "<<resistance<<endl;
+    }else{
+        cout<<"no se calculo la resistencia"<<endl;
     }
-    for(int i = 0 ; i< defaultGeneLen ; i++){
 
-        auto random_integer = uni(rng);
-        upper.push_back(random_integer);
-    }
-    for(int i = 0 ; i< defaultGeneLen ; i++){
 
-        auto random_integer = uni(rng);
-        lower.push_back(random_integer);
-    }
-    for(int i = 0 ; i< defaultGeneLen ; i++){
+    //seteando a los genes
+    this->setAtributeTovector(upper,lower,emotionalI,physical,age);
 
-        auto random_integer = uni(rng);
-        physical.push_back(random_integer);
-    }
-    for(int i = 0 ; i< defaultGeneLen ; i++){
-
-        auto random_integer = uni(rng);
-        emotionalI.push_back(random_integer);
-    }
+    this->genesToString();
 }
 
 int Gladiator::getGene(int index){
@@ -100,21 +92,23 @@ int Gladiator::binTodec(vector<int> v) {
 
 }
 
+bool Gladiator::calculateResistance() {
+    return true;
+}
+
 int Gladiator::size() {
     return defaultGeneLen;
 }
 
 void Gladiator::setGenes(int index , int gene) {
     this->genes.at(index) = gene;
-    resistance = vector<int>();
+    fitness = 0;
 }
 
 int Gladiator::getFitness() {
-    if(this->binTodec(resistance) == 0){
         if(fitness == 0){
-            fitness = Fitness::getFitness(*this);
+            this->fitness = Fitness::getFitness(*this);
         }
-    }
     return this->fitness;
 }
 
@@ -126,6 +120,28 @@ string Gladiator::genesToString() {
     return geneString;
 }
 
+void Gladiator::setAtributeTovector(int upper, int lower, int emoti, int phy, int age) {
+    genes.push_back(upper);
+    genes.push_back(lower);
+    genes.push_back(emoti);
+    genes.push_back(phy);
+    genes.push_back(age);
+}
+
+vector<int> Gladiator::getGENES() {
+    return this->genes;
+}
+
+
+void Gladiator::setVectorToAtributes() {
+    this->upper = this->genes.at(0);
+    this->lower = this->genes.at(1);
+    this->emotionalI = this->genes.at(2);
+    this->physical = this->genes.at(3);
+    this->age = this->genes.at(4);
+
+
+}
 
 
 
@@ -161,42 +177,42 @@ void Gladiator::setEstimatedG(int estimatedG) {
 }
 
 int Gladiator::getEmotionalI(){
-    return this->binTodec(emotionalI);
+    return emotionalI;
 }
 
-void Gladiator::setEmotionalI(vector<int> emotionalI) {
+void Gladiator::setEmotionalI(int emotionalI) {
     this->emotionalI = emotionalI;
 }
 
 int Gladiator::getPhysical(){
-    return this->binTodec(physical);
+    return physical;
 }
 
-void Gladiator::setPhysical(vector<int> physical) {
+void Gladiator::setPhysical(int physical) {
     this->physical = physical;
 }
 
 int Gladiator::getUpper(){
-    return this->binTodec(upper);
+    return upper;
 }
 
-void Gladiator::setUpper(vector<int> upper) {
+void Gladiator::setUpper(int upper) {
     this->upper = upper;
 }
 
 int Gladiator::getLower(){
-    return this->binTodec(lower);
+    return lower;
 }
 
-void Gladiator::setLower(vector<int> lower) {
+void Gladiator::setLower(int lower) {
     this->lower = lower;
 }
 
 int Gladiator::getResistance(){
-    return this->binTodec(resistance);
+    return resistance;
 }
 
-void Gladiator::setResistance(vector<int> resistance) {
+void Gladiator::setResistance(int resistance) {
     this->resistance = resistance;
 }
 
@@ -204,26 +220,5 @@ void Gladiator::setFitness(int fitness) {
     this->fitness = fitness;
 }
 
-//Gets de los vectores
-
-vector<int> Gladiator::getRVector() {
-    return resistance;
-}
-
-vector<int> Gladiator::getUVector() {
-    return upper;
-}
-
-vector<int> Gladiator::getLVector() {
-    return lower;
-}
-
-vector<int> Gladiator::getEVector() {
-    return emotionalI;
-}
-
-vector<int> Gladiator::getPVector() {
-    return physical;
-}
 
 

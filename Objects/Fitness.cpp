@@ -13,7 +13,7 @@ static vector<int> * solution = new vector<int>(6,1);
 void Fitness::setSolution(vector<int> sol) {
     *solution = sol;
 }
-
+//como calcular el fitness ?
 int Fitness::getFitness(Gladiator gladiator) {
     int fitness = 0;
     for(int i = 0 ; i < gladiator.size() ; i++){

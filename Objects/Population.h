@@ -12,6 +12,9 @@ class Population {
     // Se creara una poblacion con un tamaño de 90 para poder juntar siempre los nueve mejores de forma
     // 1 con todos , 2 con todos .. . sucesivamente sumando 45 , pero de cada cruce se pueden generar dos individuos
     // dando 90 otra vez
+
+    // ahora se puede calcular cualquier poblacion pues ya no se seguirá ese formato , se debe guardar al mejor en
+    // la siguiente generacion
     vector<Gladiator> * individuals;
 
 public:

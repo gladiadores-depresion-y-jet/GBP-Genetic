@@ -26,8 +26,7 @@ public:
     void setFitness(int fitness);
 
 private:
-    int id, age ,probability ,estimatedG , fitness;
-    vector<int> emotionalI, physical , upper , lower, resistance;
+    int id, age ,probability ,estimatedG , fitness, emotionalI, physical , upper , lower, resistance;
 
     vector<int> genes ;
 
@@ -37,7 +36,7 @@ public:
      * @brief Constructores de la clase gladiator
      */
     Gladiator();
-    Gladiator(int ag , vector<int> emot , vector<int> phy , vector<int> up , vector<int> low, vector<int> res);
+    Gladiator(int ag , int emot , int phy , int up , int low, int res);
     /**
      * @brief Inicializa los atributos del gladiador
      */
@@ -46,20 +45,47 @@ public:
      * @brief Inicializa al gladiador de manera aleatoria
      */
     void generateIndividual();
+    int binTodec(vector<int> v);
+    /**
+     * Calcula la resistencia en base a sus atributos
+     * @return la resistencia calculada
+     */
+    bool calculateResistance();
+    /**
+     * Retorna el largo de la cadena de genes
+     * @return
+     */
+    int size();
+    /**
+     * Setea valor a un gen especifico de la cadena
+     */
+    void setGenes(int index , int gene);
     /**
      * Obtiene un gen especifico de la cadena
      * @param index
      * @return
      */
     int getGene(int index);
-    int binTodec(vector<int> v);
-    int size();
     /**
-     * Setea valor a un gen especifico de la cadena
+     * Devuelve el fitness del individuo
+     * @return fitness
      */
-    void setGenes(int index , int gene);
     int getFitness();
+    /**
+     * Imprime los genes del individuo , los genes se refiere a cada atributo del individuo
+     * @return
+     */
     string genesToString();
+
+    void setAtributeTovector(int upper , int lower , int emoti , int phy , int age);
+
+    vector<int> getGENES();
+
+    void setVectorToAtributes();
+
+
+    //setters y getters comunes
+
     int getId();
     int getAge();
     void setAge(int age);
@@ -68,21 +94,15 @@ public:
     int getEstimatedG();
     void setEstimatedG(int estimatedG);
     int getEmotionalI();
-    void setEmotionalI(vector<int> emotionalI);
+    void setEmotionalI(int emotionalI);
     int getPhysical();
-    void setPhysical(vector<int> physical);
+    void setPhysical(int physical);
     int getUpper();
-    void setUpper(vector<int> upper);
+    void setUpper(int upper);
     int getLower();
-    void setLower(vector<int> lower);
+    void setLower(int lower);
     int getResistance();
-    void setResistance(vector<int> resistance);
-    //Gets de los vectores
-    vector<int> getRVector();
-    vector<int> getUVector();
-    vector<int> getLVector();
-    vector<int> getEVector();
-    vector<int> getPVector();
+    void setResistance(int resistance);
 
 
 

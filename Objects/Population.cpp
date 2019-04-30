@@ -1,3 +1,5 @@
+#include <utility>
+
 //
 // Created by daniel on 29/04/19.
 //
@@ -34,6 +36,6 @@ int Population::getSize() {
 }
 
 void Population::saveIndividual(int index, Gladiator gladiator) {
-    individuals->at(0) = gladiator;
+    individuals->at(static_cast<unsigned long>(index)) = std::move(gladiator);
 }
 
