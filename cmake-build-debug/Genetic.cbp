@@ -84,10 +84,28 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/sebas211288/Desktop/Genetic/Objects/Algorithm.cpp">
+			<Option target="Genetic"/>
+		</Unit>
+		<Unit filename="/home/sebas211288/Desktop/Genetic/Objects/Algorithm.h">
+			<Option target="Genetic"/>
+		</Unit>
+		<Unit filename="/home/sebas211288/Desktop/Genetic/Objects/Fitness.cpp">
+			<Option target="Genetic"/>
+		</Unit>
+		<Unit filename="/home/sebas211288/Desktop/Genetic/Objects/Fitness.h">
+			<Option target="Genetic"/>
+		</Unit>
 		<Unit filename="/home/sebas211288/Desktop/Genetic/Objects/Gladiator.cpp">
 			<Option target="Genetic"/>
 		</Unit>
 		<Unit filename="/home/sebas211288/Desktop/Genetic/Objects/Gladiator.h">
+			<Option target="Genetic"/>
+		</Unit>
+		<Unit filename="/home/sebas211288/Desktop/Genetic/Objects/Population.cpp">
+			<Option target="Genetic"/>
+		</Unit>
+		<Unit filename="/home/sebas211288/Desktop/Genetic/Objects/Population.h">
 			<Option target="Genetic"/>
 		</Unit>
 		<Unit filename="/home/sebas211288/Desktop/Genetic/Structures/LinkedList.cpp">

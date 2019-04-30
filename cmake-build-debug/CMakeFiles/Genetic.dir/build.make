@@ -109,12 +109,54 @@ CMakeFiles/Genetic.dir/Structures/Node.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Genetic.dir/Structures/Node.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebas211288/Desktop/Genetic/Structures/Node.cpp -o CMakeFiles/Genetic.dir/Structures/Node.cpp.s
 
+CMakeFiles/Genetic.dir/Objects/Population.cpp.o: CMakeFiles/Genetic.dir/flags.make
+CMakeFiles/Genetic.dir/Objects/Population.cpp.o: ../Objects/Population.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sebas211288/Desktop/Genetic/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Genetic.dir/Objects/Population.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Genetic.dir/Objects/Population.cpp.o -c /home/sebas211288/Desktop/Genetic/Objects/Population.cpp
+
+CMakeFiles/Genetic.dir/Objects/Population.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Genetic.dir/Objects/Population.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebas211288/Desktop/Genetic/Objects/Population.cpp > CMakeFiles/Genetic.dir/Objects/Population.cpp.i
+
+CMakeFiles/Genetic.dir/Objects/Population.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Genetic.dir/Objects/Population.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebas211288/Desktop/Genetic/Objects/Population.cpp -o CMakeFiles/Genetic.dir/Objects/Population.cpp.s
+
+CMakeFiles/Genetic.dir/Objects/Fitness.cpp.o: CMakeFiles/Genetic.dir/flags.make
+CMakeFiles/Genetic.dir/Objects/Fitness.cpp.o: ../Objects/Fitness.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sebas211288/Desktop/Genetic/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Genetic.dir/Objects/Fitness.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Genetic.dir/Objects/Fitness.cpp.o -c /home/sebas211288/Desktop/Genetic/Objects/Fitness.cpp
+
+CMakeFiles/Genetic.dir/Objects/Fitness.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Genetic.dir/Objects/Fitness.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebas211288/Desktop/Genetic/Objects/Fitness.cpp > CMakeFiles/Genetic.dir/Objects/Fitness.cpp.i
+
+CMakeFiles/Genetic.dir/Objects/Fitness.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Genetic.dir/Objects/Fitness.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebas211288/Desktop/Genetic/Objects/Fitness.cpp -o CMakeFiles/Genetic.dir/Objects/Fitness.cpp.s
+
+CMakeFiles/Genetic.dir/Objects/Algorithm.cpp.o: CMakeFiles/Genetic.dir/flags.make
+CMakeFiles/Genetic.dir/Objects/Algorithm.cpp.o: ../Objects/Algorithm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sebas211288/Desktop/Genetic/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Genetic.dir/Objects/Algorithm.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Genetic.dir/Objects/Algorithm.cpp.o -c /home/sebas211288/Desktop/Genetic/Objects/Algorithm.cpp
+
+CMakeFiles/Genetic.dir/Objects/Algorithm.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Genetic.dir/Objects/Algorithm.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebas211288/Desktop/Genetic/Objects/Algorithm.cpp > CMakeFiles/Genetic.dir/Objects/Algorithm.cpp.i
+
+CMakeFiles/Genetic.dir/Objects/Algorithm.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Genetic.dir/Objects/Algorithm.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebas211288/Desktop/Genetic/Objects/Algorithm.cpp -o CMakeFiles/Genetic.dir/Objects/Algorithm.cpp.s
+
 # Object files for target Genetic
 Genetic_OBJECTS = \
 "CMakeFiles/Genetic.dir/main.cpp.o" \
 "CMakeFiles/Genetic.dir/Objects/Gladiator.cpp.o" \
 "CMakeFiles/Genetic.dir/Structures/LinkedList.cpp.o" \
-"CMakeFiles/Genetic.dir/Structures/Node.cpp.o"
+"CMakeFiles/Genetic.dir/Structures/Node.cpp.o" \
+"CMakeFiles/Genetic.dir/Objects/Population.cpp.o" \
+"CMakeFiles/Genetic.dir/Objects/Fitness.cpp.o" \
+"CMakeFiles/Genetic.dir/Objects/Algorithm.cpp.o"
 
 # External object files for target Genetic
 Genetic_EXTERNAL_OBJECTS =
@@ -123,9 +165,12 @@ Genetic: CMakeFiles/Genetic.dir/main.cpp.o
 Genetic: CMakeFiles/Genetic.dir/Objects/Gladiator.cpp.o
 Genetic: CMakeFiles/Genetic.dir/Structures/LinkedList.cpp.o
 Genetic: CMakeFiles/Genetic.dir/Structures/Node.cpp.o
+Genetic: CMakeFiles/Genetic.dir/Objects/Population.cpp.o
+Genetic: CMakeFiles/Genetic.dir/Objects/Fitness.cpp.o
+Genetic: CMakeFiles/Genetic.dir/Objects/Algorithm.cpp.o
 Genetic: CMakeFiles/Genetic.dir/build.make
 Genetic: CMakeFiles/Genetic.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sebas211288/Desktop/Genetic/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Genetic"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sebas211288/Desktop/Genetic/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable Genetic"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Genetic.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

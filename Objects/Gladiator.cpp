@@ -1,5 +1,5 @@
 //
-// Created by sebas211288 on 24/04/19.
+// Created by daniel on 24/04/19.
 //
 
 
@@ -55,6 +55,7 @@ void Gladiator::init() {
 
 void Gladiator::generateIndividual() {
 
+    //La resistencia se debe calcular con atributos age,emot,phy,up,low
     for(int i = 0 ; i< defaultGeneLen ; i++){
 
         auto random_integer = uni(rng);
@@ -104,11 +105,15 @@ int Gladiator::size() {
 
 void Gladiator::setGenes(int index , int gene) {
     this->genes.at(index) = gene;
+    resistance = vector<int>();
 }
 
-/*int Gladiator::getFitness() {
-
-}*/
+int Gladiator::getFitness() {
+    if(this->binTodec(resistance) == 0){
+        //CALCULAR FITNESS
+    }
+    return this->fitness;
+}
 
 string Gladiator::genesToString() {
     string geneString = "";
@@ -190,4 +195,8 @@ int Gladiator::getResistance(){
 
 void Gladiator::setResistance(vector<int> resistance) {
     this->resistance = resistance;
+}
+
+void Gladiator::setFitness(int fitness) {
+    this->fitness = fitness;
 }

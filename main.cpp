@@ -3,8 +3,14 @@
 #include <unistd.h>
 #include <vector>
 #include "Objects/Gladiator.h"
+#include "Objects/Fitness.h"
+#include "vector"
+
+
+//std::vector<int> * Fitness::solution = new vector<int>(6,1);
 
 int main() {
+
     Gladiator * g = new Gladiator();
     Gladiator * g1 = new Gladiator();
     Gladiator * g2 = new Gladiator();
@@ -20,6 +26,7 @@ int main() {
     cout<<"resistance of gladiator: "<<g->getId()<< " is "<< g->getResistance()<< endl;
     cout<<"resistance of gladiator: "<<g1->getId()<< " is "<< g1->getResistance()<< endl;
     cout<<"resistance of gladiator: "<<g2->getId()<< " is "<< g2->getResistance()<< endl;
+    vector<int> v = vector<int>();
 
     return 0;
 }

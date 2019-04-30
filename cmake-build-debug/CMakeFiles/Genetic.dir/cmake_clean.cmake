@@ -3,6 +3,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/Genetic.dir/Objects/Gladiator.cpp.o"
   "CMakeFiles/Genetic.dir/Structures/LinkedList.cpp.o"
   "CMakeFiles/Genetic.dir/Structures/Node.cpp.o"
+  "CMakeFiles/Genetic.dir/Objects/Population.cpp.o"
+  "CMakeFiles/Genetic.dir/Objects/Fitness.cpp.o"
+  "CMakeFiles/Genetic.dir/Objects/Algorithm.cpp.o"
   "Genetic.pdb"
   "Genetic"
 )

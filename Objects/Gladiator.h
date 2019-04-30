@@ -1,5 +1,5 @@
 //
-// Created by sebas211288 on 24/04/19.
+// Created by daniel on 24/04/19.
 //
 
 #ifndef GENETIC_GLADIATOR_H
@@ -22,8 +22,11 @@
 using namespace std;
 
 class Gladiator {
+public:
+    void setFitness(int fitness);
+
 private:
-    int id, age ,probability ,estimatedG;
+    int id, age ,probability ,estimatedG , fitness;
     vector<int> emotionalI, physical , upper , lower, resistance;
 
     vector<int> genes ;
@@ -55,7 +58,7 @@ public:
      * Setea valor a un gen especifico de la cadena
      */
     void setGenes(int index , int gene);
-    /*int getFitness();*/
+    int getFitness();
     string genesToString();
     int getId();
     int getAge();
