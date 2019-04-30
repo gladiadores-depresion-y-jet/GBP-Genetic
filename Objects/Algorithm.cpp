@@ -73,14 +73,14 @@ Gladiator Algorithm::crossover(Gladiator glad1, Gladiator glad2) {
     vector<int> newEmotional = vector<int>();
     vector<int> newPhysical = vector<int>();
     vector<int> newResistance = vector<int>();
-    
+
     //CREAR GETTERS Y SETTERS PERO DE VECTOR
     for(int i = 0 ; i<3 ; i++){
-        newUpper.at(i) = glad1.
-        newLower
-        newEmotional
-        newPhysical
-        newResistance
+        newUpper.at(i) = glad1.getUVector().at(i);
+        newLower.at(i) = glad1.getLVector().at(i);
+        newEmotional.at(i) = glad1.getEVector().at(i);
+        newPhysical.at(i) = glad1.getPVector().at(i);
+        newResistance.at(i) = glad1.getRVector().at(i);
 
     }
     for(int j = 0 ; j<3 ; j++){

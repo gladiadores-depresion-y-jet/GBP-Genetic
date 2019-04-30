@@ -203,3 +203,27 @@ void Gladiator::setResistance(vector<int> resistance) {
 void Gladiator::setFitness(int fitness) {
     this->fitness = fitness;
 }
+
+//Gets de los vectores
+
+vector<int> Gladiator::getRVector() {
+    return resistance;
+}
+
+vector<int> Gladiator::getUVector() {
+    return upper;
+}
+
+vector<int> Gladiator::getLVector() {
+    return lower;
+}
+
+vector<int> Gladiator::getEVector() {
+    return emotionalI;
+}
+
+vector<int> Gladiator::getPVector() {
+    return physical;
+}
+
+

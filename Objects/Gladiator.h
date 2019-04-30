@@ -77,6 +77,14 @@ public:
     void setLower(vector<int> lower);
     int getResistance();
     void setResistance(vector<int> resistance);
+    //Gets de los vectores
+    vector<int> getRVector();
+    vector<int> getUVector();
+    vector<int> getLVector();
+    vector<int> getEVector();
+    vector<int> getPVector();
+
+
 
 
 };
