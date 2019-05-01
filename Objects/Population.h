@@ -15,7 +15,7 @@ class Population {
 
     // ahora se puede calcular cualquier poblacion pues ya no se seguirá ese formato , se debe guardar al mejor en
     // la siguiente generacion
-    vector<Gladiator> * individuals;
+    vector<Gladiator>  individuals;
 
 public:
 
@@ -24,6 +24,8 @@ public:
     Gladiator getFittest();
     int getSize();
     void saveIndividual(int index , Gladiator gladiator);
+    void saveInitIndi(Gladiator gladiator);
+    vector<Gladiator> getIndividuals();
 
 };
 

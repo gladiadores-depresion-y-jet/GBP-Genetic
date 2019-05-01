@@ -13,10 +13,10 @@ using  namespace std;
 class Fitness {
 
 public:
-    static void setSolution(vector<int> sol);
+    static void setSolution(float sol);
     //static void setSolution();
-    static int getFitness(Gladiator gladiator);
-    static int getMaxFitness();
+    static float getFitness(Gladiator gladiator);
+    static float getMaxFitness();
 
 
 };

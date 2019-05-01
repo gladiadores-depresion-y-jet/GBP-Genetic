@@ -11,14 +11,12 @@
 #include "Fitness.h"
 #include <math.h>
 
-static int defaultGeneLen = 6;
+static int defaultGeneLen = 5;
 static int individualID = 0;
 
 static std::random_device rd;     // only used once to initialise (seed) engine
 static std::mt19937 rng(rd());    // random-number engine used (Mersenne-Twister in this case)
-static std::uniform_int_distribution<int> uni(0,1); // guaranteed unbiased
-
-
+static std::uniform_int_distribution<int> uni(0,25); // guaranteed unbiased
 
 
 Gladiator::Gladiator() {
@@ -32,7 +30,8 @@ Gladiator::Gladiator() {
     this->age = 0;
     this->estimatedG = 0;
     this->probability = 0;
-    this->init();
+    this->fitness = 0;
+    //this->init();
 }
 
 
@@ -47,7 +46,8 @@ Gladiator::Gladiator(int ag, int emot, int phy, int up, int low, int res) {
     this->physical = phy;
     this->probability = 0;
     this->estimatedG = 0;
-    this->init();
+    this->fitness = 0;
+    //this->init();
 }
 
 void Gladiator::init() {
@@ -56,7 +56,7 @@ void Gladiator::init() {
 
 void Gladiator::generateIndividual() {
 
-    //La resistencia se debe calcular con atributos age,emot,phy,up,low
+    //TODO: crear ruleta de porcentajes
 
     upper = uni(rng);
     lower = uni(rng);
@@ -73,8 +73,7 @@ void Gladiator::generateIndividual() {
 
     //seteando a los genes
     this->setAtributeTovector(upper,lower,emotionalI,physical,age);
-
-    this->genesToString();
+    cout<<this->genesToString()<<endl;
 }
 
 int Gladiator::getGene(int index){
@@ -91,8 +90,31 @@ int Gladiator::binTodec(vector<int> v) {
     }return result;
 
 }
-
+//TODO: metodo para calcular la resistencia podria cambiar
 bool Gladiator::calculateResistance() {
+    int multi = 0;
+    if(this->age >= 0 & this->age<=10){
+        multi = 3;
+
+    }else if(this->age >= 11 & this->age<=24){
+        multi = 2;
+    }else if(this->age >= 25 & this->age<=40){
+        multi = 1;
+
+    }else if(this->age >= 26 & this->age<=60){
+        multi = 2;
+    }else if(this->age >= 61 & this->age<=99){
+        multi = 3;
+    }
+
+    resistance = (upper+lower+emotionalI+physical)/(4*multi);
+
+    if(resistance<0){
+        resistance = 0;
+    }else if(resistance >99){
+        resistance = 99;
+    }
+
     return true;
 }
 
@@ -105,7 +127,7 @@ void Gladiator::setGenes(int index , int gene) {
     fitness = 0;
 }
 
-int Gladiator::getFitness() {
+float Gladiator::getFitness() {
         if(fitness == 0){
             this->fitness = Fitness::getFitness(*this);
         }
@@ -113,10 +135,10 @@ int Gladiator::getFitness() {
 }
 
 string Gladiator::genesToString() {
-    string geneString = "";
-    for(int i = 0 ; i< defaultGeneLen ; i++){
-        geneString += to_string(getGene(i));
-    }
+    string geneString = "[";
+    for(int i = 0 ; i< defaultGeneLen-1 ; i++){
+        geneString += to_string(getGene(i))+",";
+    }geneString+=to_string(getGene(defaultGeneLen-1))+"]";
     return geneString;
 }
 
@@ -142,9 +164,6 @@ void Gladiator::setVectorToAtributes() {
 
 
 }
-
-
-
 
 
 //  Gets and Sets

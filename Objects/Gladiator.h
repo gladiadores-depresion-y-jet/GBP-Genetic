@@ -26,8 +26,9 @@ public:
     void setFitness(int fitness);
 
 private:
-    int id, age ,probability ,estimatedG , fitness, emotionalI, physical , upper , lower, resistance;
+    int id, age ,probability ,estimatedG , emotionalI, physical , upper , lower, resistance;
 
+    float fitness;
     vector<int> genes ;
 
 
@@ -70,7 +71,7 @@ public:
      * Devuelve el fitness del individuo
      * @return fitness
      */
-    int getFitness();
+    float getFitness();
     /**
      * Imprime los genes del individuo , los genes se refiere a cada atributo del individuo
      * @return

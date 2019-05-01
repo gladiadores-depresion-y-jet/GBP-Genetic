@@ -25,7 +25,9 @@ CMakeFiles/Genetic.dir/Structures/LinkedList.cpp.o: ../Structures/Node.h
 CMakeFiles/Genetic.dir/Structures/Node.cpp.o: ../Structures/Node.cpp
 CMakeFiles/Genetic.dir/Structures/Node.cpp.o: ../Structures/Node.h
 
+CMakeFiles/Genetic.dir/main.cpp.o: ../Objects/Algorithm.h
 CMakeFiles/Genetic.dir/main.cpp.o: ../Objects/Fitness.h
 CMakeFiles/Genetic.dir/main.cpp.o: ../Objects/Gladiator.h
+CMakeFiles/Genetic.dir/main.cpp.o: ../Objects/Population.h
 CMakeFiles/Genetic.dir/main.cpp.o: ../main.cpp
 
