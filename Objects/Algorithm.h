@@ -19,7 +19,7 @@ public:
      * @param pop poblacion de individuos
      * @return nueva poblacion
      */
-    static Population envolvePopulation(Population pop);
+    static Population envolvePopulation(Population * pop);
     /**
      * Selecciona 5 individuos al azar de la poblacion y toma el mejor
      * @param pop poblacion de la cual tomar al mejor individuo de los 5
@@ -42,7 +42,7 @@ public:
      * Funcion que ordena los individuos de una poblacion segun su fitness
      * @param pop
      */
-    static Population sortPopulation(Population pop);
+    static void sortPopulation(Population * pop);
 
 
 

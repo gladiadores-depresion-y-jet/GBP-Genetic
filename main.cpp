@@ -20,22 +20,24 @@ int main() {
 
     float solution = 6;
     Fitness::setSolution(solution);
-    Population mypop = Population(100,true);
+    Population * mypop = new Population(100,true);
     int generation = 0;
 
-    while(mypop.getFittest().getFitness() < 6){
+    while(mypop->getFittest().getFitness() < 6){
 
         generation++;
-        cout<<"Generation: "<<generation <<"Fittest: "<< mypop.getFittest().getFitness()<<endl;
-        cout<<"Gladiator Genes: "<<mypop.getFittest().genesToString()<<endl;
-        mypop = Algorithm::envolvePopulation(mypop);
+        //Population p = Algorithm::sortPopulation(mypop);
+
+        cout<<"Generation: "<<generation <<"Fittest: "<< mypop->getFittest().getFitness()<<endl;
+        cout<<"Gladiator Genes: "<<mypop->getFittest().genesToString()<<endl;
+        *mypop = Algorithm::envolvePopulation(mypop);
 
 
     }
 
     cout<<" Solution found! "<<endl;
     cout<< " Generation: "<<generation;
-    cout<< "Genes: "<< mypop.getFittest().genesToString()<<endl;
+    cout<< "Genes: "<< mypop->getFittest().genesToString()<<endl;
 
 
 
