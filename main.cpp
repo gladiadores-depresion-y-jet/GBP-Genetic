@@ -13,12 +13,11 @@
 //std::vector<int> * Fitness::solution = new vector<int>(6,1);
 static std::random_device rd;
 static std::mt19937 rng(rd());
-static std::uniform_int_distribution<int> uni(10,99);
-static std::uniform_int_distribution<int> uniSR(-20,20);
-static std::uniform_int_distribution<int> uniGen(0,4);
+
+static std::uniform_int_distribution<int> uniNew(1,2);
 
 int main() {
-    
+
     float solution = 6;
     Fitness::setSolution(solution);
     Population mypop = Population(100,true);
@@ -37,6 +36,8 @@ int main() {
     cout<<" Solution found! "<<endl;
     cout<< " Generation: "<<generation;
     cout<< "Genes: "<< mypop.getFittest().genesToString()<<endl;
+
+
 
     return 0;
 }

@@ -32,12 +32,12 @@ public:
      * @param glad2 gladiador a cruzar
      * @return nuevo gladiador con las caracterizticas de ambos
      */
-    static Gladiator crossover(Gladiator glad1 , Gladiator glad2);
+    static Gladiator crossover(Gladiator glad1 , Gladiator glad2 , bool flag);
     /**
      * Bajo cierta tasa de probabilidad , la funcion suma o resta a un gen
      * @param indiv individuo al que se le realizara la mutacion
      */
-    static void mutate(Gladiator indiv);
+    static Gladiator mutate(Gladiator indiv);
     /**
      * Funcion que ordena los individuos de una poblacion segun su fitness
      * @param pop

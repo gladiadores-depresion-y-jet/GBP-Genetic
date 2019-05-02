@@ -25,6 +25,7 @@ public:
     int getSize();
     void saveIndividual(int index , Gladiator gladiator);
     void saveInitIndi(Gladiator gladiator);
+    void deleteGladiator(int num);
     vector<Gladiator> getIndividuals();
 
 };

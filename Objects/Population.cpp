@@ -1,4 +1,5 @@
 #include <utility>
+#include <iostream>
 
 //
 // Created by daniel on 29/04/19.
@@ -23,11 +24,12 @@ Gladiator Population::getGladiator(int index) {
 }
 //TODO: fijarse con debugin como escoge con el fitness
 Gladiator Population::getFittest() {
+
     Gladiator fittest = individuals.at(0);
-    float fit1 = fittest.getFitness();
-    for(int i = 0 ; i<this->getSize() ; i++){
+    for(int i = 1 ; i<this->getSize() ; i++){
+        float fit1 = fittest.getFitness();
         float fit2 = individuals.at(i).getFitness();
-        if(fittest.getFitness()<= individuals.at(i).getFitness()){
+        if(fittest.getFitness() <= this->getGladiator(i).getFitness()){
             fittest = getGladiator(i);
         }
     }
@@ -44,6 +46,12 @@ void Population::saveIndividual(int index, Gladiator gladiator) {
 
 void Population::saveInitIndi(Gladiator gladiator) {
     individuals.push_back(gladiator);
+}
+
+void Population::deleteGladiator(int num) {
+    for(int i = 0 ; i<num ; i++){
+        this->individuals.erase(this->individuals.begin()+this->individuals.size()-1);
+    }cout<<"se han eliminado "<<num<<" individuos"<<endl;
 }
 
 vector<Gladiator> Population::getIndividuals() {

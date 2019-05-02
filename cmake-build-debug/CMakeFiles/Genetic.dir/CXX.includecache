@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
+/home/sebas211288/Desktop/Genetic/Objects/Algorithm.cpp
+random
+-
+algorithm
+-
+Algorithm.h
+/home/sebas211288/Desktop/Genetic/Objects/Algorithm.h
+
 /home/sebas211288/Desktop/Genetic/Objects/Algorithm.h
 Population.h
 /home/sebas211288/Desktop/Genetic/Objects/Population.h
-
-/home/sebas211288/Desktop/Genetic/Objects/Fitness.h
-iostream
--
-vector
--
-Gladiator.h
-/home/sebas211288/Desktop/Genetic/Objects/Gladiator.h
 
 /home/sebas211288/Desktop/Genetic/Objects/Gladiator.h
 string
@@ -31,26 +31,4 @@ vector
 /home/sebas211288/Desktop/Genetic/Objects/Population.h
 Gladiator.h
 /home/sebas211288/Desktop/Genetic/Objects/Gladiator.h
-
-/home/sebas211288/Desktop/Genetic/main.cpp
-iostream
--
-time.h
--
-unistd.h
--
-vector
--
-random
--
-Objects/Gladiator.h
-/home/sebas211288/Desktop/Genetic/Objects/Gladiator.h
-Objects/Fitness.h
-/home/sebas211288/Desktop/Genetic/Objects/Fitness.h
-vector
-/home/sebas211288/Desktop/Genetic/vector
-Objects/Population.h
-/home/sebas211288/Desktop/Genetic/Objects/Population.h
-Objects/Algorithm.h
-/home/sebas211288/Desktop/Genetic/Objects/Algorithm.h
 
