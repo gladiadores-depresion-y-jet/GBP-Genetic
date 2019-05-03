@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Genetic.dir/Objects/Population.cpp.o"
   "CMakeFiles/Genetic.dir/Objects/Fitness.cpp.o"
   "CMakeFiles/Genetic.dir/Objects/Algorithm.cpp.o"
+  "CMakeFiles/Genetic.dir/Serializador/SerialPort.cpp.o"
   "Genetic.pdb"
   "Genetic"
 )

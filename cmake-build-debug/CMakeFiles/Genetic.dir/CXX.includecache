@@ -6,14 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/sebas211288/Desktop/Genetic/Objects/Algorithm.cpp
-random
--
-algorithm
--
-Algorithm.h
-/home/sebas211288/Desktop/Genetic/Objects/Algorithm.h
-
 /home/sebas211288/Desktop/Genetic/Objects/Algorithm.h
 Population.h
 /home/sebas211288/Desktop/Genetic/Objects/Population.h
@@ -25,6 +17,22 @@ vector
 -
 Gladiator.h
 /home/sebas211288/Desktop/Genetic/Objects/Gladiator.h
+
+/home/sebas211288/Desktop/Genetic/Objects/Gladiator.cpp
+cstdlib
+-
+time.h
+-
+zconf.h
+-
+random
+-
+Gladiator.h
+/home/sebas211288/Desktop/Genetic/Objects/Gladiator.h
+Fitness.h
+/home/sebas211288/Desktop/Genetic/Objects/Fitness.h
+math.h
+-
 
 /home/sebas211288/Desktop/Genetic/Objects/Gladiator.h
 string
@@ -39,6 +47,16 @@ vector
 /home/sebas211288/Desktop/Genetic/Objects/Population.h
 Gladiator.h
 /home/sebas211288/Desktop/Genetic/Objects/Gladiator.h
+
+/home/sebas211288/Desktop/Genetic/Serializador/SerialPort.h
+iostream
+-
+fstream
+-
+string.h
+-
+string
+-
 
 /home/sebas211288/Desktop/Genetic/main.cpp
 iostream
@@ -61,4 +79,6 @@ Objects/Population.h
 /home/sebas211288/Desktop/Genetic/Objects/Population.h
 Objects/Algorithm.h
 /home/sebas211288/Desktop/Genetic/Objects/Algorithm.h
+Serializador/SerialPort.h
+/home/sebas211288/Desktop/Genetic/Serializador/SerialPort.h
 

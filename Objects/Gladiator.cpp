@@ -90,6 +90,21 @@ int Gladiator::binTodec(vector<int> v) {
     }return result;
 
 }
+vector<int> * Gladiator::decTobin(int num) {
+
+    vector<int> * binario = new vector<int>();
+    vector<int>  aux =  vector<int>();
+    while(num != 0 ){
+        int bit = num%2;
+        num = num/2;
+        aux.push_back(bit);
+
+    }for(int i = aux.size()-1 ;i>=0 ; i-- ){
+
+        binario->push_back(aux.at(i));
+    }
+    return binario;
+}
 //TODO: metodo para calcular la resistencia podria cambiar
 bool Gladiator::calculateResistance() {
     int multi = 0;
@@ -141,7 +156,7 @@ string Gladiator::genesToString() {
     }geneString+=to_string(getGene(defaultGeneLen-1))+"]";
     return geneString;
 }
-
+//TODO: cambiar metodo , convertir a binario y añadir cada cadena a la cadena de genes
 void Gladiator::setAtributeTovector(int upper, int lower, int emoti, int phy, int age) {
     genes.push_back(upper);
     genes.push_back(lower);
@@ -154,7 +169,7 @@ vector<int> Gladiator::getGENES() {
     return this->genes;
 }
 
-
+//TODO: cambiar metodo , dividir el array de genes en 5 partes y convertir cada parte a decimal y asignar al atributo
 void Gladiator::setVectorToAtributes() {
     this->upper = this->genes.at(0);
     this->lower = this->genes.at(1);

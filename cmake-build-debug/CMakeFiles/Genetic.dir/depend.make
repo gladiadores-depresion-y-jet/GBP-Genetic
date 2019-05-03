@@ -18,6 +18,9 @@ CMakeFiles/Genetic.dir/Objects/Population.cpp.o: ../Objects/Gladiator.h
 CMakeFiles/Genetic.dir/Objects/Population.cpp.o: ../Objects/Population.cpp
 CMakeFiles/Genetic.dir/Objects/Population.cpp.o: ../Objects/Population.h
 
+CMakeFiles/Genetic.dir/Serializador/SerialPort.cpp.o: ../Serializador/SerialPort.cpp
+CMakeFiles/Genetic.dir/Serializador/SerialPort.cpp.o: ../Serializador/SerialPort.h
+
 CMakeFiles/Genetic.dir/Structures/LinkedList.cpp.o: ../Structures/LinkedList.cpp
 CMakeFiles/Genetic.dir/Structures/LinkedList.cpp.o: ../Structures/LinkedList.h
 CMakeFiles/Genetic.dir/Structures/LinkedList.cpp.o: ../Structures/Node.h
@@ -29,5 +32,6 @@ CMakeFiles/Genetic.dir/main.cpp.o: ../Objects/Algorithm.h
 CMakeFiles/Genetic.dir/main.cpp.o: ../Objects/Fitness.h
 CMakeFiles/Genetic.dir/main.cpp.o: ../Objects/Gladiator.h
 CMakeFiles/Genetic.dir/main.cpp.o: ../Objects/Population.h
+CMakeFiles/Genetic.dir/main.cpp.o: ../Serializador/SerialPort.h
 CMakeFiles/Genetic.dir/main.cpp.o: ../main.cpp
 

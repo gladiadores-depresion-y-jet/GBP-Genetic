@@ -108,6 +108,12 @@
 		<Unit filename="/home/sebas211288/Desktop/Genetic/Objects/Population.h">
 			<Option target="Genetic"/>
 		</Unit>
+		<Unit filename="/home/sebas211288/Desktop/Genetic/Serializador/SerialPort.cpp">
+			<Option target="Genetic"/>
+		</Unit>
+		<Unit filename="/home/sebas211288/Desktop/Genetic/Serializador/SerialPort.h">
+			<Option target="Genetic"/>
+		</Unit>
 		<Unit filename="/home/sebas211288/Desktop/Genetic/Structures/LinkedList.cpp">
 			<Option target="Genetic"/>
 		</Unit>

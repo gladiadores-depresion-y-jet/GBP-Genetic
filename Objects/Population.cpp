@@ -10,6 +10,7 @@
 
 Population::Population(int populationSize, bool initialise) {
     individuals =  vector<Gladiator>();
+    fittest = new Gladiator();
     if(initialise){
         for(int i = 0 ; i<populationSize ; i++){
             Gladiator newGlad = Gladiator();
@@ -25,15 +26,16 @@ Gladiator Population::getGladiator(int index) {
 //TODO: fijarse con debugin como escoge con el fitness
 Gladiator Population::getFittest() {
 
-    Gladiator fittest = individuals.at(0);
+    Gladiator fit = individuals.at(0);
     for(int i = 1 ; i<this->getSize() ; i++){
-        float fit1 = fittest.getFitness();
+        float fit1 = fit.getFitness();
         float fit2 = individuals.at(i).getFitness();
-        if(fittest.getFitness() <= this->getGladiator(i).getFitness()){
-            fittest = getGladiator(i);
+        if(fit.getFitness() <= this->getGladiator(i).getFitness()){
+            fit = getGladiator(i);
         }
     }
-    return fittest;
+    *fittest  = fit;
+    return *fittest;
 }
 
 int Population::getSize() {

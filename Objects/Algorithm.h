@@ -33,6 +33,7 @@ public:
      * @return nuevo gladiador con las caracterizticas de ambos
      */
     static Gladiator crossover(Gladiator glad1 , Gladiator glad2 , bool flag);
+    static Gladiator inversion(Gladiator indiv);
     /**
      * Bajo cierta tasa de probabilidad , la funcion suma o resta a un gen
      * @param indiv individuo al que se le realizara la mutacion

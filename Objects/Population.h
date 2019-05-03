@@ -15,6 +15,7 @@ class Population {
 
     // ahora se puede calcular cualquier poblacion pues ya no se seguirá ese formato , se debe guardar al mejor en
     // la siguiente generacion
+    Gladiator * fittest;
     vector<Gladiator>  individuals;
 
 public:
