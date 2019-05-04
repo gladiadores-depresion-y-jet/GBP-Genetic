@@ -17,7 +17,8 @@ static std::uniform_int_distribution<int> uniGen(0,3);
 
 // Probabilidades de inversion y rango de genes en el que puede ocurrir el cambio
 static std::uniform_int_distribution<int> uniInv(0,200);
-static std::uniform_int_distribution<int> uniGenInv(0,29);
+static std::uniform_int_distribution<int> uniGenInv(0,34);
+static std::uniform_int_distribution<int> uniInversionTimes(1,3);
 
 //cantidad de años a sumar o restar
 static std::uniform_int_distribution<int> uniAge(-2,2);
@@ -39,7 +40,7 @@ Population Algorithm::envolvePopulation(Population * pop) {
     //reproducir a los diez mejores y sacar 10
 
     //añadiendo los cruces de los mejores
-    //TODO::Realizar de manera distinta los cruces
+
     bool flag = true;
     for(int i = 0 ; i<4; i++){
 
@@ -82,42 +83,52 @@ Gladiator Algorithm::tournamentSelection(Population pop) {
     return g;
 }
 
-
-//TODO:Cambiar con fors ya que los genes van a ser mas largos
-
 Gladiator Algorithm::crossover(Gladiator glad1, Gladiator glad2, bool flag) {
 
     Gladiator  * result = new Gladiator();
 
     //how to crossover
     if(flag){
-        result->setAtributeTovector(glad1.getGene(0) , glad2.getGene(1), glad1.getGene(2),glad2.getGene(3),glad1.getGene(4));
+        result->setAtributeTovector(glad1.getAtribute(0) , glad2.getAtribute(1), glad1.getAtribute(2),glad2.getAtribute(3),glad1.getAtribute(4));
         result->setVectorToAtributes();
         result->calculateResistance();
     }else{
-        result->setAtributeTovector(glad2.getGene(0) , glad1.getGene(1), glad2.getGene(2),glad1.getGene(3),glad2.getGene(4));
+        result->setAtributeTovector(glad2.getAtribute(0) , glad1.getAtribute(1), glad2.getAtribute(2),glad1.getAtribute(3),glad2.getAtribute(4));
         result->setVectorToAtributes();
         result->calculateResistance();
     }
     return *result;
 
 }
-//TODO: hacer la funcion de inversion
+
+
 Gladiator Algorithm::inversion(Gladiator indiv) {
+
     Gladiator glad = indiv;
+
     int invetir =  uniInv(rng);
     if(invetir== 67){
-        int genInvertido = uniGenInv(rng);
-        if(glad.getGene(genInvertido) == 1){
-            glad.setGenes(genInvertido , 0);
-        }else{
-            glad.setGenes(genInvertido,1);
+
+        int cantidad = uniInversionTimes(rng);
+
+        for(int i = 0 ; i<cantidad ; i++){
+
+            int genInvertido = uniGenInv(rng);
+            if(glad.getGene(genInvertido) == 1){
+                glad.setGenes(genInvertido , 0);
+            }else{
+                glad.setGenes(genInvertido,1);
+            }
         }
+
     }
+    glad.setVectorToAtributes();
+    glad.calculateResistance();
     return glad;
 
 
 }
+
 
 Gladiator Algorithm::mutate(Gladiator indiv) {
 
@@ -128,18 +139,25 @@ Gladiator Algorithm::mutate(Gladiator indiv) {
             int sum_rest = uniSR(rng);
             int randomGen = uniGen(rng);
             int ranAge = uniAge(rng);
-            int genAge = glad.getGene(4)+ranAge;
-            glad.setGenes(4,genAge);
-            int gene = glad.getGene(randomGen)+sum_rest;
+
+            int genAge = glad.getAtribute(4)+ranAge;
+            if(genAge > 99){
+                genAge = 99;
+            }else if(genAge<0){
+                genAge = 0;
+            }
+            glad.setAtribute(4,genAge);
+            int gene = glad.getAtribute(randomGen)+sum_rest;
             if(gene>99){
                 gene = 99;
             }else if(gene<0){
                 gene = 0;
             }
-            glad.setGenes(randomGen,gene);
+            glad.setAtribute(randomGen,gene);
         }return glad;
 
 }
+
 
 void Algorithm::sortPopulation(Population * pop) {
     //Population sortPop = pop;

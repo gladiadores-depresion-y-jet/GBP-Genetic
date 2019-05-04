@@ -1,4 +1,4 @@
-# Install script for directory: /home/sebas211288/Desktop/Genetic
+# Install script for directory: /home/david/Desktop/genetic
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/sebas211288/Desktop/Genetic/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/david/Desktop/genetic/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

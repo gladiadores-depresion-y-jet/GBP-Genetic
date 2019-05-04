@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/sebas211288/Desktop/Genetic/cmake-build-debug"/>
+				<Option working_dir="/home/david/Desktop/genetic/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/sebas211288/Desktop/Genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/sebas211288/Desktop/Genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/sebas211288/Desktop/Genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/sebas211288/Desktop/Genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/sebas211288/Desktop/Genetic/cmake-build-debug"/>
+				<Option working_dir="/home/david/Desktop/genetic/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/sebas211288/Desktop/Genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/sebas211288/Desktop/Genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/sebas211288/Desktop/Genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/sebas211288/Desktop/Genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Genetic">
-				<Option output="/home/sebas211288/Desktop/Genetic/cmake-build-debug/Genetic" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/sebas211288/Desktop/Genetic/cmake-build-debug"/>
+				<Option output="/home/david/Desktop/genetic/cmake-build-debug/Genetic" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/david/Desktop/genetic/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -44,15 +44,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/sebas211288/Desktop/Genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 Genetic"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/sebas211288/Desktop/Genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/sebas211288/Desktop/Genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/sebas211288/Desktop/Genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 Genetic"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Genetic/fast">
-				<Option output="/home/sebas211288/Desktop/Genetic/cmake-build-debug/Genetic" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/sebas211288/Desktop/Genetic/cmake-build-debug"/>
+				<Option output="/home/david/Desktop/genetic/cmake-build-debug/Genetic" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/david/Desktop/genetic/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -67,69 +67,69 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/sebas211288/Desktop/Genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 Genetic/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/sebas211288/Desktop/Genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/sebas211288/Desktop/Genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/sebas211288/Desktop/Genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 Genetic/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/sebas211288/Desktop/Genetic/cmake-build-debug"/>
+				<Option working_dir="/home/david/Desktop/genetic/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/sebas211288/Desktop/Genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/sebas211288/Desktop/Genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/sebas211288/Desktop/Genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/sebas211288/Desktop/Genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/genetic/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/sebas211288/Desktop/Genetic/Objects/Algorithm.cpp">
+		<Unit filename="/home/david/Desktop/genetic/Objects/Algorithm.cpp">
 			<Option target="Genetic"/>
 		</Unit>
-		<Unit filename="/home/sebas211288/Desktop/Genetic/Objects/Algorithm.h">
+		<Unit filename="/home/david/Desktop/genetic/Objects/Algorithm.h">
 			<Option target="Genetic"/>
 		</Unit>
-		<Unit filename="/home/sebas211288/Desktop/Genetic/Objects/Fitness.cpp">
+		<Unit filename="/home/david/Desktop/genetic/Objects/Fitness.cpp">
 			<Option target="Genetic"/>
 		</Unit>
-		<Unit filename="/home/sebas211288/Desktop/Genetic/Objects/Fitness.h">
+		<Unit filename="/home/david/Desktop/genetic/Objects/Fitness.h">
 			<Option target="Genetic"/>
 		</Unit>
-		<Unit filename="/home/sebas211288/Desktop/Genetic/Objects/Gladiator.cpp">
+		<Unit filename="/home/david/Desktop/genetic/Objects/Gladiator.cpp">
 			<Option target="Genetic"/>
 		</Unit>
-		<Unit filename="/home/sebas211288/Desktop/Genetic/Objects/Gladiator.h">
+		<Unit filename="/home/david/Desktop/genetic/Objects/Gladiator.h">
 			<Option target="Genetic"/>
 		</Unit>
-		<Unit filename="/home/sebas211288/Desktop/Genetic/Objects/Population.cpp">
+		<Unit filename="/home/david/Desktop/genetic/Objects/Population.cpp">
 			<Option target="Genetic"/>
 		</Unit>
-		<Unit filename="/home/sebas211288/Desktop/Genetic/Objects/Population.h">
+		<Unit filename="/home/david/Desktop/genetic/Objects/Population.h">
 			<Option target="Genetic"/>
 		</Unit>
-		<Unit filename="/home/sebas211288/Desktop/Genetic/Serializador/SerialPort.cpp">
+		<Unit filename="/home/david/Desktop/genetic/Serializador/SerialPort.cpp">
 			<Option target="Genetic"/>
 		</Unit>
-		<Unit filename="/home/sebas211288/Desktop/Genetic/Serializador/SerialPort.h">
+		<Unit filename="/home/david/Desktop/genetic/Serializador/SerialPort.h">
 			<Option target="Genetic"/>
 		</Unit>
-		<Unit filename="/home/sebas211288/Desktop/Genetic/Structures/LinkedList.cpp">
+		<Unit filename="/home/david/Desktop/genetic/Structures/LinkedList.cpp">
 			<Option target="Genetic"/>
 		</Unit>
-		<Unit filename="/home/sebas211288/Desktop/Genetic/Structures/LinkedList.h">
+		<Unit filename="/home/david/Desktop/genetic/Structures/LinkedList.h">
 			<Option target="Genetic"/>
 		</Unit>
-		<Unit filename="/home/sebas211288/Desktop/Genetic/Structures/Node.cpp">
+		<Unit filename="/home/david/Desktop/genetic/Structures/Node.cpp">
 			<Option target="Genetic"/>
 		</Unit>
-		<Unit filename="/home/sebas211288/Desktop/Genetic/Structures/Node.h">
+		<Unit filename="/home/david/Desktop/genetic/Structures/Node.h">
 			<Option target="Genetic"/>
 		</Unit>
-		<Unit filename="/home/sebas211288/Desktop/Genetic/main.cpp">
+		<Unit filename="/home/david/Desktop/genetic/main.cpp">
 			<Option target="Genetic"/>
 		</Unit>
-		<Unit filename="/home/sebas211288/Desktop/Genetic/CMakeLists.txt">
+		<Unit filename="/home/david/Desktop/genetic/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

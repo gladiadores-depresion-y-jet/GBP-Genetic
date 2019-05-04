@@ -9,9 +9,6 @@
 #include "Population.h"
 
 class Algorithm {
-    //parametos de GA
-
-public:
 
 public:
     /**

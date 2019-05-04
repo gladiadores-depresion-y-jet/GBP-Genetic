@@ -11,7 +11,7 @@
 #include "Fitness.h"
 #include <math.h>
 
-static int defaultGeneLen = 5;
+static int defaultGeneLen = 34;
 static int individualID = 0;
 
 static std::random_device rd;     // only used once to initialise (seed) engine
@@ -56,8 +56,6 @@ void Gladiator::init() {
 
 void Gladiator::generateIndividual() {
 
-    //TODO: crear ruleta de porcentajes
-
     upper = uni(rng);
     lower = uni(rng);
     physical = uni(rng);
@@ -73,12 +71,13 @@ void Gladiator::generateIndividual() {
 
     //seteando a los genes
     this->setAtributeTovector(upper,lower,emotionalI,physical,age);
-    cout<<this->genesToString()<<endl;
+    //cout<<this->genesToString()<<endl;
 }
 
 int Gladiator::getGene(int index){
     return genes.at(index);
 }
+
 int Gladiator::binTodec(vector<int> v) {
     int result = 0;
     int exponent = v.size()-1;
@@ -90,22 +89,27 @@ int Gladiator::binTodec(vector<int> v) {
     }return result;
 
 }
-vector<int> * Gladiator::decTobin(int num) {
+vector<int> Gladiator::decTobin(int num) {
 
-    vector<int> * binario = new vector<int>();
+    vector<int>  binario = vector<int>();
     vector<int>  aux =  vector<int>();
     while(num != 0 ){
         int bit = num%2;
         num = num/2;
         aux.push_back(bit);
 
-    }for(int i = aux.size()-1 ;i>=0 ; i-- ){
+    }
+    int zero = 7-aux.size();
+    for(int i = 0 ; i< zero ; i++){
+        aux.push_back(0);
+    }
+    for(int i = aux.size()-1 ;i>=0 ; i-- ){
 
-        binario->push_back(aux.at(i));
+        binario.push_back(aux.at(i));
     }
     return binario;
 }
-//TODO: metodo para calcular la resistencia podria cambiar
+
 bool Gladiator::calculateResistance() {
     int multi = 0;
     if(this->age >= 0 & this->age<=10){
@@ -156,26 +160,40 @@ string Gladiator::genesToString() {
     }geneString+=to_string(getGene(defaultGeneLen-1))+"]";
     return geneString;
 }
-//TODO: cambiar metodo , convertir a binario y añadir cada cadena a la cadena de genes
+
 void Gladiator::setAtributeTovector(int upper, int lower, int emoti, int phy, int age) {
-    genes.push_back(upper);
-    genes.push_back(lower);
-    genes.push_back(emoti);
-    genes.push_back(phy);
-    genes.push_back(age);
+
+    this->addTOgenes(this->decTobin(upper));
+    this->addTOgenes(this->decTobin(lower));
+    this->addTOgenes(this->decTobin(emoti));
+    this->addTOgenes(this->decTobin(phy));
+    this->addTOgenes(this->decTobin(age));
+
+    //genes.push_back(upper);
+    //genes.push_back(lower);
+    //genes.push_back(emoti);
+    //genes.push_back(phy);
+    //genes.push_back(age);
 }
 
 vector<int> Gladiator::getGENES() {
     return this->genes;
 }
 
-//TODO: cambiar metodo , dividir el array de genes en 5 partes y convertir cada parte a decimal y asignar al atributo
 void Gladiator::setVectorToAtributes() {
-    this->upper = this->genes.at(0);
+
+    this->upper = this->binTodec(this->getVectorIndex(0,6));
+    this->lower = this->binTodec(this->getVectorIndex(7,13));
+    this->emotionalI = this->binTodec(this->getVectorIndex(14,20));
+    this->physical = this->binTodec(this->getVectorIndex(21,27));
+    this->age = this->binTodec(this->getVectorIndex(28,34));
+
+
+/*    this->upper = this->genes.at(0);
     this->lower = this->genes.at(1);
     this->emotionalI = this->genes.at(2);
     this->physical = this->genes.at(3);
-    this->age = this->genes.at(4);
+    this->age = this->genes.at(4);*/
 
 
 }
@@ -252,6 +270,59 @@ void Gladiator::setResistance(int resistance) {
 
 void Gladiator::setFitness(int fitness) {
     this->fitness = fitness;
+}
+
+int Gladiator::getAtribute(int index) {
+
+        switch (index){
+            case 0:
+                return this->upper;
+            case 1:
+                return this->lower;
+            case 2:
+                return this->emotionalI;
+            case 3:
+                return this->physical;
+            case 4:
+                return this->age;
+            default:break;
+        }
+
+}
+
+void Gladiator::setAtribute(int index, int gen) {
+
+        switch (index){
+            case 0:
+                 this->upper += gen;
+            case 1:
+                 this->lower += gen;
+            case 2:
+                 this->emotionalI += gen;
+            case 3:
+                 this->physical += gen;
+            case 4:
+                 this->age += gen;
+            default:break;
+        }
+
+
+}
+
+void Gladiator::addTOgenes(vector<int> vector) {
+    for(int i = 0 ; i<vector.size() ; i++){
+        this->genes.push_back(vector.at(i));
+    }
+
+}
+
+vector<int> Gladiator::getVectorIndex(int index1, int index2) {
+
+    vector<int> v = vector<int>();
+    for(int i = index1 ; i< index2+1 ; i++ ){
+        v.push_back(this->getGene(i));
+    } return v;
+
 }
 
 

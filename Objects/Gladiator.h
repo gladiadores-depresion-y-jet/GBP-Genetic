@@ -47,7 +47,7 @@ public:
      */
     void generateIndividual();
     int binTodec(vector<int> v);
-    vector<int> *decTobin(int num);
+    vector<int> decTobin(int num);
     /**
      * Calcula la resistencia en base a sus atributos
      * @return la resistencia calculada
@@ -105,6 +105,11 @@ public:
     void setLower(int lower);
     int getResistance();
     void setResistance(int resistance);
+
+    int getAtribute(int index);
+    void setAtribute(int index , int gen);
+    void addTOgenes(vector<int> vector);
+    vector<int> getVectorIndex(int index1 , int index2);
 
 
 

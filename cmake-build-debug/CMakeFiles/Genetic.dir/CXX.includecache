@@ -6,35 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/sebas211288/Desktop/Genetic/Objects/Algorithm.h
+/home/david/Desktop/genetic/Objects/Algorithm.h
 Population.h
-/home/sebas211288/Desktop/Genetic/Objects/Population.h
+/home/david/Desktop/genetic/Objects/Population.h
 
-/home/sebas211288/Desktop/Genetic/Objects/Fitness.h
+/home/david/Desktop/genetic/Objects/Fitness.h
 iostream
 -
 vector
 -
 Gladiator.h
-/home/sebas211288/Desktop/Genetic/Objects/Gladiator.h
+/home/david/Desktop/genetic/Objects/Gladiator.h
 
-/home/sebas211288/Desktop/Genetic/Objects/Gladiator.cpp
-cstdlib
--
-time.h
--
-zconf.h
--
-random
--
-Gladiator.h
-/home/sebas211288/Desktop/Genetic/Objects/Gladiator.h
-Fitness.h
-/home/sebas211288/Desktop/Genetic/Objects/Fitness.h
-math.h
--
-
-/home/sebas211288/Desktop/Genetic/Objects/Gladiator.h
+/home/david/Desktop/genetic/Objects/Gladiator.h
 string
 -
 string.h
@@ -44,11 +28,11 @@ zconf.h
 vector
 -
 
-/home/sebas211288/Desktop/Genetic/Objects/Population.h
+/home/david/Desktop/genetic/Objects/Population.h
 Gladiator.h
-/home/sebas211288/Desktop/Genetic/Objects/Gladiator.h
+/home/david/Desktop/genetic/Objects/Gladiator.h
 
-/home/sebas211288/Desktop/Genetic/Serializador/SerialPort.h
+/home/david/Desktop/genetic/Serializador/SerialPort.h
 iostream
 -
 fstream
@@ -58,7 +42,7 @@ string.h
 string
 -
 
-/home/sebas211288/Desktop/Genetic/main.cpp
+/home/david/Desktop/genetic/main.cpp
 iostream
 -
 time.h
@@ -70,15 +54,15 @@ vector
 random
 -
 Objects/Gladiator.h
-/home/sebas211288/Desktop/Genetic/Objects/Gladiator.h
+/home/david/Desktop/genetic/Objects/Gladiator.h
 Objects/Fitness.h
-/home/sebas211288/Desktop/Genetic/Objects/Fitness.h
+/home/david/Desktop/genetic/Objects/Fitness.h
 vector
-/home/sebas211288/Desktop/Genetic/vector
+/home/david/Desktop/genetic/vector
 Objects/Population.h
-/home/sebas211288/Desktop/Genetic/Objects/Population.h
+/home/david/Desktop/genetic/Objects/Population.h
 Objects/Algorithm.h
-/home/sebas211288/Desktop/Genetic/Objects/Algorithm.h
+/home/david/Desktop/genetic/Objects/Algorithm.h
 Serializador/SerialPort.h
-/home/sebas211288/Desktop/Genetic/Serializador/SerialPort.h
+/home/david/Desktop/genetic/Serializador/SerialPort.h
 
