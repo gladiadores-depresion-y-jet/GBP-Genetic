@@ -1,3 +1,3 @@
-/home/david/Desktop/genetic/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/david/Desktop/genetic/cmake-build-debug/CMakeFiles/Genetic.dir
-/home/david/Desktop/genetic/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Toshiba/Desktop/nuevoGenetico/GENETIC/cmake-build-debug/CMakeFiles/Genetic.dir
+C:/Users/Toshiba/Desktop/nuevoGenetico/GENETIC/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Toshiba/Desktop/nuevoGenetico/GENETIC/cmake-build-debug/CMakeFiles/rebuild_cache.dir

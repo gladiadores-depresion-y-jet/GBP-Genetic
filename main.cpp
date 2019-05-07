@@ -23,7 +23,7 @@ int main() {
 
     cout<<f.getGene(4)<<endl;
 
-    int num = 2;
+    int num = 102;
     vector<int>  bin = f.decTobin(num);
     cout<<bin.size()<<endl;
     for(int i = 0; i< bin.size() ; i++){

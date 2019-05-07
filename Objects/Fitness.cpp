@@ -23,8 +23,8 @@ float Fitness::getFitness(Gladiator gladiator) {
 
     // se añade un -1 para que no llegue a tomar la edad ,
     // ya que con esta se calcula diferente el fitnes
-    for(int i = 0 ; i < gladiator.size()-1 ; i++){
-        fitness += (float)gladiator.getGene(i)/n;
+    for(int i = 0 ; i < 4 ; i++){
+        fitness += (float)gladiator.getAtribute(i)/n;
     }
 
     //añadiendo resistencia

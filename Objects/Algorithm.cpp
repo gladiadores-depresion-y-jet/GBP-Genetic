@@ -4,32 +4,12 @@
 
 #include <random>
 #include <algorithm>
+#include <time.h>
 #include "Algorithm.h"
 
-static std::random_device rd;
-static std::mt19937 rng(rd());
-static std::uniform_int_distribution<int> uni(10,99);
-
-// Probabilidades de mutacion y cantidad a sumar y restar
-static std::uniform_int_distribution<int> uniMut(0,99);
-static std::uniform_int_distribution<int> uniSR(-20,20);
-static std::uniform_int_distribution<int> uniGen(0,3);
-
-// Probabilidades de inversion y rango de genes en el que puede ocurrir el cambio
-static std::uniform_int_distribution<int> uniInv(0,200);
-static std::uniform_int_distribution<int> uniGenInv(0,34);
-static std::uniform_int_distribution<int> uniInversionTimes(1,3);
-
-//cantidad de años a sumar o restar
-static std::uniform_int_distribution<int> uniAge(-2,2);
-
-// torunament ya no se necesita
-static int tournamentSize = 5;
 //si el numero random sale entre estos valores entonces se produce una mutacion
-static auto mutationRate = vector<int>{15, 50};
-//si el numero random sale entre estos valores entonces se produce una inversion
-static auto inversionRate = vector<int>{67};
-
+static auto mutationRate = vector<int>{15, 50,2,77,99,80};
+static auto inversionRate = vector<int>{5, 60,3,81,94};
 
 Population Algorithm::envolvePopulation(Population * pop) {
 
@@ -45,6 +25,7 @@ Population Algorithm::envolvePopulation(Population * pop) {
     for(int i = 0 ; i<4; i++){
 
         for(int j = i+1 ; j<5; j++){
+            flag = !flag;
 
             Gladiator newGladiator = mutate(crossover(pop->getGladiator(i),pop->getGladiator(j),flag));
             //introducirlos a la poblacion
@@ -56,31 +37,8 @@ Population Algorithm::envolvePopulation(Population * pop) {
     for(int i = 0 ; i<90 ; i++){
         newPopulation.saveInitIndi(pop->getGladiator(i));
     }
-
-    //reproducir del 40 al 89 e introducir a la poblacion
-//    for (int i = 40; i < sortPop.getSize()-10; i++) {
-//
-//        flag = i % 2 != 0;
-//        Gladiator indiv1 = tournamentSelection(sortPop);
-//        Gladiator indiv2 = tournamentSelection(sortPop);
-//        Gladiator newIndiv = mutate(crossover(indiv1, indiv2 , flag));
-//        //introducirlos a la poblacion
-//        newPopulation.saveInitIndi(newIndiv);
-//    }
-
-
     return newPopulation;
 
-}
-
-Gladiator Algorithm::tournamentSelection(Population pop) {
-    Population tournament = Population(tournamentSize,false);
-    for(int i = 0 ; i<tournamentSize ; i++){
-        auto random = uni(rng);
-        tournament.saveInitIndi(pop.getGladiator(random));
-    }
-    Gladiator g = tournament.getFittest();
-    return g;
 }
 
 Gladiator Algorithm::crossover(Gladiator glad1, Gladiator glad2, bool flag) {
@@ -101,30 +59,58 @@ Gladiator Algorithm::crossover(Gladiator glad1, Gladiator glad2, bool flag) {
 
 }
 
-
 Gladiator Algorithm::inversion(Gladiator indiv) {
 
-    Gladiator glad = indiv;
 
-    int invetir =  uniInv(rng);
-    if(invetir== 67){
+    srand (time(0));
+    int invertir= rand() % 100;
+    if(std::find(inversionRate.begin(), inversionRate.end(), invertir) != inversionRate.end()) {
+        Gladiator * glad = new Gladiator();
+        glad->setGenesVector(indiv.getGENES());
+        glad->setID(indiv.getId());
+        int init = rand() % 35;
+        int end = rand() % 35;
+        if(init > end){
+            int temp = end;
+            end = init;
+            init = temp;
+        }
+        int final = end;
+        for(int i = init ; i<end+1 ; i++ ){
+            int t = glad->getGene(i);
+            glad->setGenes(i,glad->getGene(final));
+            glad->setGenes(final , t);
+            final--;
+        }return *glad;
+    }return indiv;
 
-        int cantidad = uniInversionTimes(rng);
+
+/*    srand (time(0));
+    int invertir= rand() % 200;
+    if(invertir == 67){
+        Gladiator * glad = new Gladiator();
+        glad->setGenesVector(indiv.getGENES());
+        glad->setID(indiv.getId());
+
+        int cantidad = rand() % 4 +1;
 
         for(int i = 0 ; i<cantidad ; i++){
 
-            int genInvertido = uniGenInv(rng);
-            if(glad.getGene(genInvertido) == 1){
-                glad.setGenes(genInvertido , 0);
+            int genInvertido= rand() %35 ;
+
+            if(glad->getGene(genInvertido) == 1){
+                glad->setGenes(genInvertido , 0);
             }else{
-                glad.setGenes(genInvertido,1);
+                glad->setGenes(genInvertido,1);
             }
         }
+        glad->setVectorToAtributes();
+        glad->verifyAtributesLimit();
+        glad->calculateResistance();
+        return *glad;
 
-    }
-    glad.setVectorToAtributes();
-    glad.calculateResistance();
-    return glad;
+    }return indiv;*/
+
 
 
 }
@@ -132,29 +118,67 @@ Gladiator Algorithm::inversion(Gladiator indiv) {
 
 Gladiator Algorithm::mutate(Gladiator indiv) {
 
-    Gladiator glad = indiv;
-    int random = uniMut(rng);
-    if(std::find(mutationRate.begin(), mutationRate.end(), random) != mutationRate.end()) {
-            /* mutationRate contains random */
-            int sum_rest = uniSR(rng);
-            int randomGen = uniGen(rng);
-            int ranAge = uniAge(rng);
 
-            int genAge = glad.getAtribute(4)+ranAge;
-            if(genAge > 99){
-                genAge = 99;
-            }else if(genAge<0){
-                genAge = 0;
+    //TODO probabilidad de que cada bit mute (esto produce que hayan cadenas que no estaban antes)
+    srand (time(0));
+    //int random= rand() % 100;
+    Gladiator * glad = new Gladiator();
+
+    glad->setGenesVector(indiv.getGENES());
+    glad->setID(indiv.getId());
+    glad->setVectorToAtributes();
+    for(int i = 0; i<34 ; i++){
+        int random = rand() %100;
+        if(std::find(mutationRate.begin(), mutationRate.end(), random) != mutationRate.end()) {
+            if(glad->getGene(i) == 0){
+                glad->setGenes(i,1);
+            }else{
+                glad->setGenes(i ,0);
             }
-            glad.setAtribute(4,genAge);
-            int gene = glad.getAtribute(randomGen)+sum_rest;
-            if(gene>99){
-                gene = 99;
-            }else if(gene<0){
-                gene = 0;
-            }
-            glad.setAtribute(randomGen,gene);
-        }return glad;
+        }
+    }
+    glad->setVectorToAtributes();
+    glad->verifyAtributesLimit();
+    glad->calculateResistance();
+    return *glad;
+
+
+//    if(std::find(mutationRate.begin(), mutationRate.end(), random) != mutationRate.end()) {
+//        Gladiator * glad = new Gladiator();
+//        glad->setGenesVector(indiv.getGENES());
+//        glad->setID(indiv.getId());
+//        glad->setVectorToAtributes();
+//
+//            /* mutationRate contains random */
+//
+//            srand (time(0));
+//            int sum_rest= rand() % 21;
+//
+//            int randomGen = rand() % 4;
+//
+//            int ranAge = rand() % 3;
+//
+//            int genAge = glad->getAtribute(4)+ranAge;
+//            if(genAge > 99){
+//                genAge = 99;
+//            }else if(genAge<0){
+//                genAge = 0;
+//            }
+//            glad->setAtribute(4,genAge);
+//            int gene = glad->getAtribute(randomGen)+sum_rest;
+//            if(gene>99){
+//                gene = 99;
+//            }else if(gene<0){
+//                gene = 0;
+//            }
+//            glad->setAtribute(randomGen,gene);
+//        glad->verifyAtributesLimit();
+//        glad->setAtributeTovector();
+//        glad->calculateResistance();
+//
+//        return *glad;
+//        }return indiv;
+
 
 }
 

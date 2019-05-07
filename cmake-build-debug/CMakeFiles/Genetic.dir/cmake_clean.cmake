@@ -1,14 +1,16 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Genetic.dir/main.cpp.o"
-  "CMakeFiles/Genetic.dir/Objects/Gladiator.cpp.o"
-  "CMakeFiles/Genetic.dir/Structures/LinkedList.cpp.o"
-  "CMakeFiles/Genetic.dir/Structures/Node.cpp.o"
-  "CMakeFiles/Genetic.dir/Objects/Population.cpp.o"
-  "CMakeFiles/Genetic.dir/Objects/Fitness.cpp.o"
-  "CMakeFiles/Genetic.dir/Objects/Algorithm.cpp.o"
-  "CMakeFiles/Genetic.dir/Serializador/SerialPort.cpp.o"
+  "CMakeFiles/Genetic.dir/main.cpp.obj"
+  "CMakeFiles/Genetic.dir/Objects/Gladiator.cpp.obj"
+  "CMakeFiles/Genetic.dir/Structures/LinkedList.cpp.obj"
+  "CMakeFiles/Genetic.dir/Structures/Node.cpp.obj"
+  "CMakeFiles/Genetic.dir/Objects/Population.cpp.obj"
+  "CMakeFiles/Genetic.dir/Objects/Fitness.cpp.obj"
+  "CMakeFiles/Genetic.dir/Objects/Algorithm.cpp.obj"
+  "CMakeFiles/Genetic.dir/Serializador/SerialPort.cpp.obj"
   "Genetic.pdb"
-  "Genetic"
+  "Genetic.exe"
+  "Genetic.exe.manifest"
+  "libGenetic.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

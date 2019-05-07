@@ -1,6 +1,6 @@
 #include <utility>
 #include <iostream>
-
+#include <unistd.h>
 //
 // Created by daniel on 29/04/19.
 //
@@ -9,6 +9,7 @@
 
 
 Population::Population(int populationSize, bool initialise) {
+
     individuals =  vector<Gladiator>();
     fittest = new Gladiator();
     if(initialise){

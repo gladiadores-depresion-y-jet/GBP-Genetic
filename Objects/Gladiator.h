@@ -8,7 +8,7 @@
 
 #include <string>
 #include <string.h>
-#include <zconf.h>
+//#include <zconf.h>
 #include <vector>
 
 
@@ -80,7 +80,7 @@ public:
     string genesToString();
 
     void setAtributeTovector(int upper , int lower , int emoti , int phy , int age);
-
+    void setAtributeTovector();
     vector<int> getGENES();
 
     void setVectorToAtributes();
@@ -110,6 +110,9 @@ public:
     void setAtribute(int index , int gen);
     void addTOgenes(vector<int> vector);
     vector<int> getVectorIndex(int index1 , int index2);
+    void verifyAtributesLimit();
+    void setGenesVector(vector<int> vector);
+    void setID(int id);
 
 
 
