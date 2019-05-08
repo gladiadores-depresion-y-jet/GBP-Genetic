@@ -10,6 +10,7 @@
 #include "Gladiator.h"
 #include "Fitness.h"
 #include <math.h>
+#include <sstream>
 
 static int defaultGeneLen = 5;
 static int individualID = 0;
@@ -252,6 +253,20 @@ void Gladiator::setResistance(int resistance) {
 
 void Gladiator::setFitness(int fitness) {
     this->fitness = fitness;
+}
+
+ptree Gladiator::stringToPtree(string s)
+{
+    std::istringstream iss(s);
+    ptree document;
+    read_json(iss, document);
+    return document;
+}
+
+string Gladiator::ptreeToString(ptree pt) {
+    std::ostringstream oss;
+    write_json(oss, pt);
+    return oss.str();
 }
 
 

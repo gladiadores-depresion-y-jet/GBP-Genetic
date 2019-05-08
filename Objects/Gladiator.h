@@ -10,6 +10,8 @@
 #include <string.h>
 #include <zconf.h>
 #include <vector>
+#include <boost/property_tree/ptree.hpp>
+#include <boost/property_tree/json_parser.hpp>
 
 
 /**
@@ -20,6 +22,7 @@
  * @brief Clase que abstrae la informacion de un individuo
  */
 using namespace std;
+using boost::property_tree::ptree;
 
 class Gladiator {
 public:
@@ -105,6 +108,9 @@ public:
     void setLower(int lower);
     int getResistance();
     void setResistance(int resistance);
+    ptree stringToPtree(string json);
+    string ptreeToString(ptree string);
+
 
 
 
