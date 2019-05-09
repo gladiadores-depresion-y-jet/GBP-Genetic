@@ -28,6 +28,7 @@ public:
     void saveInitIndi(Gladiator gladiator);
     void deleteGladiator(int num);
     vector<Gladiator> getIndividuals();
+    void calcALLProbability();
 
 };
 

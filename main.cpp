@@ -43,14 +43,17 @@ int main() {/*    Gladiator f = Gladiator();
     Fitness::setSolution(solution);
     Population * mypop = new Population(100,true);
     int generation = 0;
-
+    float var = mypop->getFittest().getFitness();
     while(mypop->getFittest().getFitness() < 6){
-
         generation++;
         //Population p = Algorithm::sortPopulation(mypop);
         Algorithm::sortPopulation(mypop);
-        cout<<"Generation: "<<generation <<"Fittest: "<< mypop->getFittest().getFitness()<<endl;
-        cout<<"Gladiator Genes: "<<mypop->getFittest().genesToString()<<endl;
+        if(mypop->getFittest().getFitness() > var){
+            var = mypop->getFittest().getFitness();
+            cout<<"Generation: "<<generation <<"Fittest: "<< mypop->getFittest().getFitness()<<endl;
+            cout<<"Gladiator Genes: "<<mypop->getFittest().genesToString()<<endl;
+            cout<<"Probabulity: "<<mypop->getFittest().getProbability()<<" Resistance "<<mypop->getFittest().getResistance()<<endl;
+        }
         *mypop = Algorithm::envolvePopulation(mypop);
 
 
@@ -59,11 +62,6 @@ int main() {/*    Gladiator f = Gladiator();
     cout<<" Solution found! "<<endl;
     cout<< " Generation: "<<generation;
     cout<< "Genes: "<< mypop->getFittest().genesToString()<<endl;
-
-    SerialPort serial = SerialPort();
-    serial.sendMessage("on");
-
-
-
+    
     return 0;
 }

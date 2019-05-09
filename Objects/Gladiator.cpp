@@ -5,7 +5,7 @@
 
 #include <cstdlib>
 #include <time.h>
-#include <zconf.h>
+//#include <zconf.h>
 #include <random>
 #include "Gladiator.h"
 #include "Fitness.h"
@@ -36,10 +36,10 @@ Gladiator::Gladiator() {
 }
 
 
-Gladiator::Gladiator(int ag, int emot, int phy, int up, int low, int res) {
+Gladiator::Gladiator(int ag, int emot, int phy, int up, int low) {
     this->genes = vector<int>();
     this->id = individualID; individualID++;
-    this->resistance = res;
+    this->resistance = 0;
     this->age = ag;
     this->lower = low;
     this->upper = up;
@@ -195,7 +195,7 @@ void Gladiator::setAge(int age) {
     Gladiator::age = age;
 }
 
-int Gladiator::getProbability(){
+float Gladiator::getProbability(){
     return probability;
 }
 
@@ -255,19 +255,16 @@ void Gladiator::setFitness(int fitness) {
     this->fitness = fitness;
 }
 
-ptree Gladiator::stringToPtree(string s)
-{
-    std::istringstream iss(s);
-    ptree document;
-    read_json(iss, document);
-    return document;
+void Gladiator::calculateProbability() {
+    this->probability = (100*this->getFitness())/6;
 }
 
-string Gladiator::ptreeToString(ptree pt) {
-    std::ostringstream oss;
-    write_json(oss, pt);
-    return oss.str();
+void Gladiator::setGENE(vector<int> g) {
+    this->genes = g;
 }
+
+
+
 
 
 

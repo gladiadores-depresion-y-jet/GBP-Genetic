@@ -8,10 +8,9 @@
 
 #include <string>
 #include <string.h>
-#include <zconf.h>
+//#include <zconf.h>
 #include <vector>
-#include <boost/property_tree/ptree.hpp>
-#include <boost/property_tree/json_parser.hpp>
+
 
 
 /**
@@ -22,16 +21,17 @@
  * @brief Clase que abstrae la informacion de un individuo
  */
 using namespace std;
-using boost::property_tree::ptree;
+
 
 class Gladiator {
 public:
     void setFitness(int fitness);
 
 private:
-    int id, age ,probability ,estimatedG , emotionalI, physical , upper , lower, resistance;
+    int id, age ,estimatedG , emotionalI, physical , upper , lower, resistance;
 
-    float fitness;
+    float fitness ,probability;
+
     vector<int> genes ;
 
 
@@ -40,7 +40,7 @@ public:
      * @brief Constructores de la clase gladiator
      */
     Gladiator();
-    Gladiator(int ag , int emot , int phy , int up , int low, int res);
+    Gladiator(int ag , int emot , int phy , int up , int low);
     /**
      * @brief Inicializa los atributos del gladiador
      */
@@ -94,7 +94,7 @@ public:
     int getId();
     int getAge();
     void setAge(int age);
-    int getProbability();
+    float getProbability();
     void setProbability(int probability);
     int getEstimatedG();
     void setEstimatedG(int estimatedG);
@@ -108,8 +108,10 @@ public:
     void setLower(int lower);
     int getResistance();
     void setResistance(int resistance);
-    ptree stringToPtree(string json);
-    string ptreeToString(ptree string);
+    void calculateProbability();
+    void setGENE(vector<int> g);
+
+
 
 
 

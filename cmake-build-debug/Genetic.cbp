@@ -8,128 +8,124 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/david/Desktop/GeneticFuncional/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Toshiba/Desktop/GeneticF/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/GeneticFuncional/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/GeneticFuncional/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/GeneticFuncional/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/GeneticFuncional/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="rebuild_cache">
-				<Option working_dir="/home/david/Desktop/GeneticFuncional/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/GeneticFuncional/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/GeneticFuncional/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/GeneticFuncional/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/GeneticFuncional/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/GeneticF/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/GeneticF/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/GeneticF/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/GeneticF/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Genetic">
-				<Option output="/home/david/Desktop/GeneticFuncional/cmake-build-debug/Genetic" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/david/Desktop/GeneticFuncional/cmake-build-debug"/>
+				<Option output="C:/Users/Toshiba/Desktop/GeneticF/cmake-build-debug/Genetic.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Toshiba/Desktop/GeneticF/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/GeneticFuncional/cmake-build-debug/Makefile&quot;  VERBOSE=1 Genetic"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/GeneticFuncional/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/GeneticFuncional/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/GeneticFuncional/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/GeneticF/cmake-build-debug/Makefile&quot;  VERBOSE=1 Genetic"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/GeneticF/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/GeneticF/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/GeneticF/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Genetic/fast">
-				<Option output="/home/david/Desktop/GeneticFuncional/cmake-build-debug/Genetic" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/david/Desktop/GeneticFuncional/cmake-build-debug"/>
+				<Option output="C:/Users/Toshiba/Desktop/GeneticF/cmake-build-debug/Genetic.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Toshiba/Desktop/GeneticF/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/GeneticFuncional/cmake-build-debug/Makefile&quot;  VERBOSE=1 Genetic/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/GeneticFuncional/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/GeneticFuncional/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/GeneticFuncional/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/GeneticF/cmake-build-debug/Makefile&quot;  VERBOSE=1 Genetic/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/GeneticF/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/GeneticF/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/GeneticF/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/david/Desktop/GeneticFuncional/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Toshiba/Desktop/GeneticF/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/GeneticFuncional/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/GeneticFuncional/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/GeneticFuncional/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/david/Desktop/GeneticFuncional/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/GeneticF/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/GeneticF/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/GeneticF/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/GeneticF/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/Toshiba/Desktop/GeneticF/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/GeneticF/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/GeneticF/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/GeneticF/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Toshiba/Desktop/GeneticF/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/david/Desktop/GeneticFuncional/Objects/Algorithm.cpp">
+		<Unit filename="C:/Users/Toshiba/Desktop/GeneticF/Objects/Algorithm.cpp">
 			<Option target="Genetic"/>
 		</Unit>
-		<Unit filename="/home/david/Desktop/GeneticFuncional/Objects/Algorithm.h">
+		<Unit filename="C:/Users/Toshiba/Desktop/GeneticF/Objects/Algorithm.h">
 			<Option target="Genetic"/>
 		</Unit>
-		<Unit filename="/home/david/Desktop/GeneticFuncional/Objects/Fitness.cpp">
+		<Unit filename="C:/Users/Toshiba/Desktop/GeneticF/Objects/Fitness.cpp">
 			<Option target="Genetic"/>
 		</Unit>
-		<Unit filename="/home/david/Desktop/GeneticFuncional/Objects/Fitness.h">
+		<Unit filename="C:/Users/Toshiba/Desktop/GeneticF/Objects/Fitness.h">
 			<Option target="Genetic"/>
 		</Unit>
-		<Unit filename="/home/david/Desktop/GeneticFuncional/Objects/Gladiator.cpp">
+		<Unit filename="C:/Users/Toshiba/Desktop/GeneticF/Objects/Gladiator.cpp">
 			<Option target="Genetic"/>
 		</Unit>
-		<Unit filename="/home/david/Desktop/GeneticFuncional/Objects/Gladiator.h">
+		<Unit filename="C:/Users/Toshiba/Desktop/GeneticF/Objects/Gladiator.h">
 			<Option target="Genetic"/>
 		</Unit>
-		<Unit filename="/home/david/Desktop/GeneticFuncional/Objects/Population.cpp">
+		<Unit filename="C:/Users/Toshiba/Desktop/GeneticF/Objects/Population.cpp">
 			<Option target="Genetic"/>
 		</Unit>
-		<Unit filename="/home/david/Desktop/GeneticFuncional/Objects/Population.h">
+		<Unit filename="C:/Users/Toshiba/Desktop/GeneticF/Objects/Population.h">
 			<Option target="Genetic"/>
 		</Unit>
-		<Unit filename="/home/david/Desktop/GeneticFuncional/Serializador/SerialPort.cpp">
+		<Unit filename="C:/Users/Toshiba/Desktop/GeneticF/Serializador/SerialPort.cpp">
 			<Option target="Genetic"/>
 		</Unit>
-		<Unit filename="/home/david/Desktop/GeneticFuncional/Serializador/SerialPort.h">
+		<Unit filename="C:/Users/Toshiba/Desktop/GeneticF/Serializador/SerialPort.h">
 			<Option target="Genetic"/>
 		</Unit>
-		<Unit filename="/home/david/Desktop/GeneticFuncional/Structures/LinkedList.cpp">
+		<Unit filename="C:/Users/Toshiba/Desktop/GeneticF/Structures/LinkedList.cpp">
 			<Option target="Genetic"/>
 		</Unit>
-		<Unit filename="/home/david/Desktop/GeneticFuncional/Structures/LinkedList.h">
+		<Unit filename="C:/Users/Toshiba/Desktop/GeneticF/Structures/LinkedList.h">
 			<Option target="Genetic"/>
 		</Unit>
-		<Unit filename="/home/david/Desktop/GeneticFuncional/Structures/Node.cpp">
+		<Unit filename="C:/Users/Toshiba/Desktop/GeneticF/Structures/Node.cpp">
 			<Option target="Genetic"/>
 		</Unit>
-		<Unit filename="/home/david/Desktop/GeneticFuncional/Structures/Node.h">
+		<Unit filename="C:/Users/Toshiba/Desktop/GeneticF/Structures/Node.h">
 			<Option target="Genetic"/>
 		</Unit>
-		<Unit filename="/home/david/Desktop/GeneticFuncional/main.cpp">
+		<Unit filename="C:/Users/Toshiba/Desktop/GeneticF/main.cpp">
 			<Option target="Genetic"/>
 		</Unit>
-		<Unit filename="/home/david/Desktop/GeneticFuncional/CMakeLists.txt">
+		<Unit filename="C:/Users/Toshiba/Desktop/GeneticF/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

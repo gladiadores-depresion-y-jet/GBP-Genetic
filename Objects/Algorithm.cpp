@@ -12,11 +12,11 @@ static std::uniform_int_distribution<int> uni(10,99);
 
 // Probabilidades de mutacion y cantidad a sumar y restar
 static std::uniform_int_distribution<int> uniMut(0,99);
-static std::uniform_int_distribution<int> uniSR(-20,20);
+static std::uniform_int_distribution<int> uniSR(0,15);
 static std::uniform_int_distribution<int> uniGen(0,3);
 
 // Probabilidades de inversion y rango de genes en el que puede ocurrir el cambio
-static std::uniform_int_distribution<int> uniInv(0,200);
+static std::uniform_int_distribution<int> uniInv(0,99);
 static std::uniform_int_distribution<int> uniGenInv(0,29);
 
 //cantidad de años a sumar o restar
@@ -45,7 +45,7 @@ Population Algorithm::envolvePopulation(Population * pop) {
 
         for(int j = i+1 ; j<5; j++){
 
-            Gladiator newGladiator = mutate(crossover(pop->getGladiator(i),pop->getGladiator(j),flag));
+            Gladiator newGladiator = inversion(mutate(crossover(pop->getGladiator(i),pop->getGladiator(j),flag)));
             //introducirlos a la poblacion
             newPopulation.saveInitIndi(newGladiator);
 
@@ -55,6 +55,7 @@ Population Algorithm::envolvePopulation(Population * pop) {
     for(int i = 0 ; i<90 ; i++){
         newPopulation.saveInitIndi(pop->getGladiator(i));
     }
+    newPopulation.calcALLProbability();
 
     //reproducir del 40 al 89 e introducir a la poblacion
 //    for (int i = 40; i < sortPop.getSize()-10; i++) {
@@ -105,14 +106,21 @@ Gladiator Algorithm::crossover(Gladiator glad1, Gladiator glad2, bool flag) {
 //TODO: hacer la funcion de inversion
 Gladiator Algorithm::inversion(Gladiator indiv) {
     Gladiator glad = indiv;
+    vector<int> newVector = glad.getGENES();
+
     int invetir =  uniInv(rng);
+    int aux;
     if(invetir== 67){
-        int genInvertido = uniGenInv(rng);
-        if(glad.getGene(genInvertido) == 1){
-            glad.setGenes(genInvertido , 0);
-        }else{
-            glad.setGenes(genInvertido,1);
+        for(int i = 0 ;i <2 ; i++){
+            aux = newVector[i];
+            newVector[i] = newVector[4-i];
+            newVector[4-i] = aux;
         }
+        glad.setGENE(newVector);
+        glad.setVectorToAtributes();
+        glad.calculateResistance();
+
+
     }
     return glad;
 
